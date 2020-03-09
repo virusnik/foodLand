@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "70A815F3-1461-44E9-A2DD-B1DB709749D5"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C4942494-B8FB-4CDC-B4C2-90D0FE89A693"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "MainView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "C4942494-B8FB-4CDC-B4C2-90D0FE89A693 - 627d5c93b4759eca"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodLand.MainView.selected.getter : Swift.Int"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "C4942494-B8FB-4CDC-B4C2-90D0FE89A693 - 2bed28dfb4172ac6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodLand.MainView.selected.setter : Swift.Int"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "139">
+               </Location>
+               <Location
+                  uuid = "C4942494-B8FB-4CDC-B4C2-90D0FE89A693 - 1e3bf66f8d571dd7"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodLand.MainView.selected.modify : Swift.Int"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "97">
+               </Location>
+               <Location
+                  uuid = "C4942494-B8FB-4CDC-B4C2-90D0FE89A693 - 3b53ba2d391849c6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodLand.MainView.selected.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "46">
+               </Location>
+               <Location
+                  uuid = "C4942494-B8FB-4CDC-B4C2-90D0FE89A693 - 47ce2a8f95fca98e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodLand.MainView.$selected.getter : SwiftUI.Binding&lt;Swift.Int&gt;"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "152">
+               </Location>
+               <Location
+                  uuid = "C4942494-B8FB-4CDC-B4C2-90D0FE89A693 - b657ce53250ac5e4"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodLand.MainView.init(categoryListViewModel: SwiftUI.EnvironmentObject&lt;FoodLand.CategoryListViewModel&gt;, selected: Swift.Int) -&gt; FoodLand.MainView"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  uuid = "C4942494-B8FB-4CDC-B4C2-90D0FE89A693 - 1c5d0d8afd67eded"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodLand.MainView.init() -&gt; FoodLand.MainView"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "34D951CB-DDF1-406D-AE97-1CF257C23BBD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/ChooseTableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "34D951CB-DDF1-406D-AE97-1CF257C23BBD - e883cbaf46edee9d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.textFieldStyle&lt;A where A1: SwiftUI.TextFieldStyle&gt;(A1) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in FoodLand.ChooseTableView.body.getter : some"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/ChooseTableView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "1204">
+               </Location>
+               <Location
+                  uuid = "34D951CB-DDF1-406D-AE97-1CF257C23BBD - b1007143c5ada6c4"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.textFieldStyle&lt;A where A1: SwiftUI.TextFieldStyle&gt;(A1) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.navigationBarTitle(SwiftUI.LocalizedStringKey) -&gt; some&gt;&gt;.0 in FoodLand.ChooseTableView.body.getter : some"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/ChooseTableView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "78">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80652F3D-978D-4B7C-99BF-F1AEC8B091AD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/ChooseTableView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01D51E79-6B5E-4FC5-B35E-B61C86F79B64"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "01D51E79-6B5E-4FC5-B35E-B61C86F79B64 - a64508fba270e0a4"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodLand.MainView.body.getter : some"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "01D51E79-6B5E-4FC5-B35E-B61C86F79B64 - 9890d12bba34430e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.tabItem&lt;A where A1: SwiftUI.View&gt;(() -&gt; A1) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.tabItem&lt;A where A1: SwiftUI.View&gt;(() -&gt; A1) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.tabItem&lt;A where A1: SwiftUI.View&gt;(() -&gt; A1) -&gt; some&gt;&gt;.0)&gt; in FoodLand.MainView.body.getter : some"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/MainView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "558">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "223C4443-4EEC-4A7C-A4BD-EE6FCA77821D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/MainView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
