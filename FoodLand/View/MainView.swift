@@ -12,10 +12,12 @@ struct MainView: View {
     
     @EnvironmentObject var categoryListViewModel: CategoryListViewModel
     @State var selected = 0
+//    @State var seletedItem: Int? = 0
     
     var body: some View {
         TabView(selection: $selected) {
-            ChooseTableView(numberTable: "", selected: $selected, categoryListViewModel: _categoryListViewModel)
+            ChooseTableView(numberTable: "", selected: selected)
+//            ChooseTableView(numberTable: "", selected: $selected, selectedItem: $seletedItem, categoryListViewModel: _categoryListViewModel)
                 .tag(0)
                 .tabItem {
                     VStack {
@@ -25,7 +27,7 @@ struct MainView: View {
             }
             
             MenuView()
-                .environmentObject(categoryListViewModel)
+//                .environmentObject(categoryListViewModel)
                 .tag(1)
                 .tabItem {
                     VStack {
@@ -41,13 +43,13 @@ struct MainView: View {
                     Image(systemName: Constants.TabBarImageName.about)
             }
             
-            TwoColumnView()
-                .environmentObject(categoryListViewModel)
-                .tag(3)
-                .tabItem {
-                    Text("Column")
-                    Image(systemName: "hexagon")
-            }
+//            TwoColumnView()
+//                .environmentObject(categoryListViewModel)
+//                .tag(3)
+//                .tabItem {
+//                    Text("Column")
+//                    Image(systemName: "hexagon")
+//            }
             
         }
         

@@ -11,7 +11,7 @@ import SwiftUI
 struct MenuView: View {
     
     @EnvironmentObject var viewModel: CategoryListViewModel
-    
+    @Binding var selectedItem: Int
     
     var body: some View {
         NavigationView {
@@ -19,6 +19,12 @@ struct MenuView: View {
                 ActivityIndicatorView()
             } else {
                 List {
+//                    ForEach(viewModel.category) { category in
+//                        NavigationLink(destination: DishListView(Text("Coming soon")), tag: 1, selection: self.$selectedItem) {
+//                            Text("coming soon")
+//                        }
+//                    }
+                    
                     ForEach(viewModel.category) { category in
                         //Row
                         NavigationLink(destination: DishListView(Text("Coming soon"))) {
@@ -35,7 +41,8 @@ struct MenuView: View {
 }
 
 struct MenuView_Previews: PreviewProvider {
+    @State static var selectedItem = 1
     static var previews: some View {
-        MenuView().environmentObject(CategoryListViewModel())
+        MenuView(selectedItem: $selectedItem)
     }
 }
