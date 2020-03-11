@@ -12,8 +12,7 @@ struct ChooseTableView: View {
     
     @State var numberTable: String = ""
     @Binding var selected: Int
-//    @Binding var selectedItem: Int? = 0
-//    @EnvironmentObject var categoryListViewModel: CategoryListViewModel
+    @Binding var selectedItem: Int?
     
     var body: some View {
         
@@ -26,7 +25,7 @@ struct ChooseTableView: View {
                 NavigationLink(destination: MainView(selected: selected)) {
                     Button("To menu") {
                         self.selected = 1
-//                        self.selectedItem = Int(self.numberTable)
+                        self.selectedItem = Int(self.numberTable)
                     }
                 } //NavigationLink
             }
@@ -41,9 +40,8 @@ struct ChooseTableView: View {
 
 struct ChooseTableView_Previews: PreviewProvider {
     @State static var selected = 1
-//    @State static var seletedItem  = 1
+    @State static var selectedItem:Int? = 1
     static var previews: some View {
-        ChooseTableView(selected: $selected)
-//        ChooseTableView(selected: $selected, selectedItem: $seletedItem)
+        ChooseTableView(selected: $selected, selectedItem: $selectedItem)
     }
 }
