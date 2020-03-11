@@ -12,7 +12,7 @@ struct MainView: View {
     
     @EnvironmentObject var categoryListViewModel: CategoryListViewModel
     @State var selected: Int = 0
-    @State var selectedItem: Int? = 0
+    @State var selectedItem: Int?
     
     var body: some View {
         TabView(selection: self.$selected) {
