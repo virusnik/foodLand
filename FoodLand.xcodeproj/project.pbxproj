@@ -26,7 +26,7 @@
 		36AF7CA42411073800FFF9B0 /* FoodListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7CA32411073800FFF9B0 /* FoodListModel.swift */; };
 		36AF7CA62411102D00FFF9B0 /* FoodListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7CA52411102D00FFF9B0 /* FoodListViewModel.swift */; };
 		36AF7CAA241170CB00FFF9B0 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7CA9241170CB00FFF9B0 /* ActivityIndicator.swift */; };
-		36AF7CAE24117C3C00FFF9B0 /* TwoColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7CAD24117C3C00FFF9B0 /* TwoColumnView.swift */; };
+		7F5896FD241932560019F22C /* TwoColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5896FC241932560019F22C /* TwoColumnView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +72,7 @@
 		36AF7CA32411073800FFF9B0 /* FoodListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListModel.swift; sourceTree = "<group>"; };
 		36AF7CA52411102D00FFF9B0 /* FoodListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModel.swift; sourceTree = "<group>"; };
 		36AF7CA9241170CB00FFF9B0 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		36AF7CAD24117C3C00FFF9B0 /* TwoColumnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnView.swift; sourceTree = "<group>"; };
+		7F5896FC241932560019F22C /* TwoColumnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoColumnView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +109,7 @@
 				36AF7C9B2410225700FFF9B0 /* DishListView.swift */,
 				36AF7C95240D415F00FFF9B0 /* AboutView.swift */,
 				36AF7C9D2410253100FFF9B0 /* AboutViewModal.swift */,
+				7F5896FC241932560019F22C /* TwoColumnView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,7 +208,6 @@
 			children = (
 				36AF7C97240D41E800FFF9B0 /* CategoryListViewModel.swift */,
 				36AF7CA52411102D00FFF9B0 /* FoodListViewModel.swift */,
-				36AF7CAD24117C3C00FFF9B0 /* TwoColumnView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -353,10 +353,10 @@
 				36AF7C9A240FD5F700FFF9B0 /* CategoryListModel.swift in Sources */,
 				36AF7C66240D3A5500FFF9B0 /* SceneDelegate.swift in Sources */,
 				36AF7C98240D41E800FFF9B0 /* CategoryListViewModel.swift in Sources */,
+				7F5896FD241932560019F22C /* TwoColumnView.swift in Sources */,
 				36AF7C9C2410225700FFF9B0 /* DishListView.swift in Sources */,
 				36AF7C94240D3F4700FFF9B0 /* MenuView.swift in Sources */,
 				36AF7C68240D3A5500FFF9B0 /* MainView.swift in Sources */,
-				36AF7CAE24117C3C00FFF9B0 /* TwoColumnView.swift in Sources */,
 				36AF7C96240D415F00FFF9B0 /* AboutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

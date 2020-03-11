@@ -11,13 +11,14 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject var categoryListViewModel: CategoryListViewModel
-    @State var selected = 0
-//    @State var seletedItem: Int? = 0
+    @State var selected: Int = 0
+    @State var selectedItem: Int? = 0
     
     var body: some View {
-        TabView(selection: $selected) {
-            ChooseTableView(numberTable: "", selected: selected)
-//            ChooseTableView(numberTable: "", selected: $selected, selectedItem: $seletedItem, categoryListViewModel: _categoryListViewModel)
+        TabView(selection: self.$selected) {
+            ChooseTableView(numberTable: "",
+                            selected: $selected,
+                            selectedItem: $selectedItem)
                 .tag(0)
                 .tabItem {
                     VStack {
@@ -26,8 +27,7 @@ struct MainView: View {
                     }
             }
             
-            MenuView()
-//                .environmentObject(categoryListViewModel)
+            MenuView(selectedItem: self.$selectedItem)
                 .tag(1)
                 .tabItem {
                     VStack {
@@ -43,13 +43,12 @@ struct MainView: View {
                     Image(systemName: Constants.TabBarImageName.about)
             }
             
-//            TwoColumnView()
-//                .environmentObject(categoryListViewModel)
-//                .tag(3)
-//                .tabItem {
-//                    Text("Column")
-//                    Image(systemName: "hexagon")
-//            }
+            TwoColumnView()
+                .tag(3)
+                .tabItem {
+                    Text("Column")
+                    Image(systemName: "hexagon")
+            }
             
         }
         
