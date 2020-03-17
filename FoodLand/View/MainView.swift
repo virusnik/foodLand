@@ -11,6 +11,7 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject var categoryListViewModel: CategoryListViewModel
+    @EnvironmentObject var beersListViewModel: BeersListViewModel
     @State var selected: Int = 0
     @State var selectedItem: Int?
     
@@ -43,7 +44,7 @@ struct MainView: View {
                     Image(systemName: Constants.TabBarImageName.about)
             }
             
-            TwoColumnView()
+            PunkView()
                 .tag(3)
                 .tabItem {
                     Text("Column")

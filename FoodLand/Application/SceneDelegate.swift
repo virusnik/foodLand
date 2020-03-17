@@ -23,6 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let contentView = MainView()
             .environmentObject(CategoryListViewModel())
             .environmentObject(FoodListViewModel())
+            .environmentObject(BeersListViewModel())
+            .environmentObject(BeerRandomViewModel())
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

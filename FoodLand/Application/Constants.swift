@@ -23,4 +23,24 @@ struct Constants {
         static let about = "About"
     }
     
+    struct ProductionServer {
+        static let baseURL = "https://api.punkapi.com/v2/"
+    }
+    
+    struct APIParameterKey {
+        static let page = "page"
+        static let perPage = "per_page"
+    }
+    
+    enum HTTPHeaderField: String {
+        case authentication = "Authorization"
+        case contentType = "Content-Type"
+        case acceptType = "Accept"
+        case acceptEncoding = "Accept-Encoding"
+    }
+    
+    enum ContentType: String {
+        case json = "application/json"
+    }
+    
 }
