@@ -8,10 +8,27 @@
 
 import Foundation
 
-struct BeersModelElement: Codable {
+struct BeersModelElement {
     let name: String?
     let description: String?
     let imageURL: String?
+}
+
+extension BeersModelElement: Decodable {
+    
+    enum BeersCodingKeys: String, CodingKey {
+        case name
+        case description
+        case imageURL = "image_url"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let beerContainer = try decoder.container(keyedBy: BeersCodingKeys.self)
+        name = try beerContainer.decode(String.self, forKey: .name)
+        description = try beerContainer.decode(String.self, forKey: .description)
+        imageURL = try beerContainer.decode(String.self, forKey: .imageURL)
+    }
+    
 }
 
 extension BeersModelElement: Identifiable {

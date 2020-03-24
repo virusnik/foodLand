@@ -1,5 +1,5 @@
 //
-//  BeersListViewModel.swift
+//  BeersViewModel.swift
 //  FoodLand
 //
 //  Created by Sergio Veliz on 3/15/20.
@@ -8,11 +8,12 @@
 
 import Foundation
 
-final class BeersListViewModel: ObservableObject {
+final class BeersViewModel: ObservableObject {
     
     @Published private(set) var items: [BeersModelElement] = [BeersModelElement]()
     @Published private(set) var page: Int = 1
     @Published private(set) var isPageLoading: Bool = false
+    @Published var name: String?
     
     func loadPage() {
         
@@ -36,14 +37,15 @@ final class BeersListViewModel: ObservableObject {
     }
     
     func loadBeerRandom() {
-        DispatchQueue.main.async {
-            self.isPageLoading = true
-            
-            NetworkManager().getBeerRandom() { (item, error) in
+        self.isPageLoading = true
+        
+        NetworkManager().getBeerRandom() { (item, error) in
+            DispatchQueue.main.async {
                 if let error = error {
                     print(error)
                 }
                 if let item = item {
+                    self.name = item[0].name
                     self.items.append(contentsOf: item)
                 }
                 self.isPageLoading = false

@@ -9,31 +9,28 @@
 import SwiftUI
 
 struct BeerListView: View {
-    @EnvironmentObject private var viewModel: BeersListViewModel
-
+    @EnvironmentObject private var viewModel: BeersViewModel
+    
     var body: some View {
-//        NavigationView {
-            List(viewModel.items) { item in
-                VStack(alignment: .leading) {
-                    BeersRow(item: item).onTapGesture {
-                        print("push to details")
-//                        NavPushButton(destination: BeerDetailsView()) {
-//                            Text("push to details")
-//                        }
-                    }
+        List(viewModel.items) { item in
+            VStack(alignment: .leading) {
+                BeersRow(item: item)
                     .onAppear() {
                         if self.viewModel.items.isLast(item) {
                             self.viewModel.loadPage()
                         }
-                    }
                 }
-
+                NavPushButton(destination: BeerDetailsView(item: item)) {
+                    Text("push to details beer")
+                        .foregroundColor(.orange)
+                }
             }
-            .navigationBarTitle("Beers")
-            .onAppear() {
-                self.viewModel.loadPage()
-            }
-//        }
+            
+        }
+        .navigationBarTitle("Beers")
+        .onAppear() {
+            self.viewModel.loadPage()
+        }
     }
 }
 

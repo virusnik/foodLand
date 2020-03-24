@@ -11,7 +11,7 @@ import SwiftUI
 struct BeerRandomView: View {
     
 //    @State var isAbout: Bool = false
-    @EnvironmentObject private var viewModel: BeerRandomViewModel
+    @EnvironmentObject private var viewModel: BeersViewModel
     
     var body: some View {
         

@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		362FE2F5241E136500D9F1F8 /* BeersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE2F4241E136500D9F1F8 /* BeersListViewModel.swift */; };
+		3615B6CD2429DF210079B7BF /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3615B6CC2429DF210079B7BF /* ImagesManager.swift */; };
+		3615B6CF2429E30B0079B7BF /* ImageViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3615B6CE2429E30B0079B7BF /* ImageViewContainer.swift */; };
+		362FE2F5241E136500D9F1F8 /* BeersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE2F4241E136500D9F1F8 /* BeersViewModel.swift */; };
 		362FE2F7241E182100D9F1F8 /* ExtensionsRandomAccsess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE2F6241E182100D9F1F8 /* ExtensionsRandomAccsess.swift */; };
 		362FE2F9241F73BE00D9F1F8 /* Beers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE2F8241F73BE00D9F1F8 /* Beers.swift */; };
 		362FE306241FB4FB00D9F1F8 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE305241FB4FB00D9F1F8 /* NetworkManager.swift */; };
@@ -21,7 +23,6 @@
 		362FE316241FB62E00D9F1F8 /* BeersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE315241FB62E00D9F1F8 /* BeersAPI.swift */; };
 		362FE31A2420962E00D9F1F8 /* BeersRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE3192420962E00D9F1F8 /* BeersRow.swift */; };
 		362FE3212420A45900D9F1F8 /* BeerRandomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE3202420A45900D9F1F8 /* BeerRandomView.swift */; };
-		362FE3232420AC6700D9F1F8 /* BeerRandomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE3222420AC6700D9F1F8 /* BeerRandomViewModel.swift */; };
 		362FE3252420B7C000D9F1F8 /* NavControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE3242420B7C000D9F1F8 /* NavControllerView.swift */; };
 		362FE3272420B81F00D9F1F8 /* NavControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE3262420B81F00D9F1F8 /* NavControllerViewModel.swift */; };
 		362FE3292420B89300D9F1F8 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE3282420B89300D9F1F8 /* Screen.swift */; };
@@ -70,7 +71,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		362FE2F4241E136500D9F1F8 /* BeersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersListViewModel.swift; sourceTree = "<group>"; };
+		3615B6CC2429DF210079B7BF /* ImagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
+		3615B6CE2429E30B0079B7BF /* ImageViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewContainer.swift; sourceTree = "<group>"; };
+		362FE2F4241E136500D9F1F8 /* BeersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersViewModel.swift; sourceTree = "<group>"; };
 		362FE2F6241E182100D9F1F8 /* ExtensionsRandomAccsess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsRandomAccsess.swift; sourceTree = "<group>"; };
 		362FE2F8241F73BE00D9F1F8 /* Beers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beers.swift; sourceTree = "<group>"; };
 		362FE305241FB4FB00D9F1F8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -84,7 +87,6 @@
 		362FE315241FB62E00D9F1F8 /* BeersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersAPI.swift; sourceTree = "<group>"; };
 		362FE3192420962E00D9F1F8 /* BeersRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersRow.swift; sourceTree = "<group>"; };
 		362FE3202420A45900D9F1F8 /* BeerRandomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRandomView.swift; sourceTree = "<group>"; };
-		362FE3222420AC6700D9F1F8 /* BeerRandomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRandomViewModel.swift; sourceTree = "<group>"; };
 		362FE3242420B7C000D9F1F8 /* NavControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavControllerView.swift; sourceTree = "<group>"; };
 		362FE3262420B81F00D9F1F8 /* NavControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavControllerViewModel.swift; sourceTree = "<group>"; };
 		362FE3282420B89300D9F1F8 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				362FE305241FB4FB00D9F1F8 /* NetworkManager.swift */,
+				3615B6CC2429DF210079B7BF /* ImagesManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 				36AF7C95240D415F00FFF9B0 /* AboutView.swift */,
 				36AF7C9D2410253100FFF9B0 /* AboutViewModal.swift */,
 				7F5896FC241932560019F22C /* TwoColumnView.swift */,
+				3615B6CE2429E30B0079B7BF /* ImageViewContainer.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -330,8 +334,7 @@
 			children = (
 				36AF7C97240D41E800FFF9B0 /* CategoryListViewModel.swift */,
 				36AF7CA52411102D00FFF9B0 /* FoodListViewModel.swift */,
-				362FE2F4241E136500D9F1F8 /* BeersListViewModel.swift */,
-				362FE3222420AC6700D9F1F8 /* BeerRandomViewModel.swift */,
+				362FE2F4241E136500D9F1F8 /* BeersViewModel.swift */,
 				362FE3262420B81F00D9F1F8 /* NavControllerViewModel.swift */,
 			);
 			path = ViewModel;
@@ -476,6 +479,7 @@
 				36AF7C64240D3A5500FFF9B0 /* AppDelegate.swift in Sources */,
 				36E2D645241D3523003D54C0 /* PunkView.swift in Sources */,
 				36AF7CA62411102D00FFF9B0 /* FoodListViewModel.swift in Sources */,
+				3615B6CF2429E30B0079B7BF /* ImageViewContainer.swift in Sources */,
 				362FE2F7241E182100D9F1F8 /* ExtensionsRandomAccsess.swift in Sources */,
 				362FE31A2420962E00D9F1F8 /* BeersRow.swift in Sources */,
 				36AF7CA42411073800FFF9B0 /* FoodListModel.swift in Sources */,
@@ -490,6 +494,7 @@
 				36AF7C9E2410253100FFF9B0 /* AboutViewModal.swift in Sources */,
 				362FE32B2420BBBB00D9F1F8 /* NavPushButton.swift in Sources */,
 				362FE3272420B81F00D9F1F8 /* NavControllerViewModel.swift in Sources */,
+				3615B6CD2429DF210079B7BF /* ImagesManager.swift in Sources */,
 				362FE306241FB4FB00D9F1F8 /* NetworkManager.swift in Sources */,
 				362FE310241FB5B800D9F1F8 /* ParametrEncoding.swift in Sources */,
 				36AF7C9A240FD5F700FFF9B0 /* CategoryListModel.swift in Sources */,
@@ -498,7 +503,7 @@
 				362FE316241FB62E00D9F1F8 /* BeersAPI.swift in Sources */,
 				362FE3252420B7C000D9F1F8 /* NavControllerView.swift in Sources */,
 				362FE3292420B89300D9F1F8 /* Screen.swift in Sources */,
-				362FE2F5241E136500D9F1F8 /* BeersListViewModel.swift in Sources */,
+				362FE2F5241E136500D9F1F8 /* BeersViewModel.swift in Sources */,
 				36AF7C66240D3A5500FFF9B0 /* SceneDelegate.swift in Sources */,
 				36AF7C98240D41E800FFF9B0 /* CategoryListViewModel.swift in Sources */,
 				7F5896FD241932560019F22C /* TwoColumnView.swift in Sources */,
@@ -509,7 +514,6 @@
 				36AF7C94240D3F4700FFF9B0 /* MenuView.swift in Sources */,
 				36AF7C68240D3A5500FFF9B0 /* MainView.swift in Sources */,
 				36AF7C96240D415F00FFF9B0 /* AboutView.swift in Sources */,
-				362FE3232420AC6700D9F1F8 /* BeerRandomViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

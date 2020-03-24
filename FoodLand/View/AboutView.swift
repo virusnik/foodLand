@@ -14,6 +14,7 @@ struct AboutView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             Button(action: {
             }, label: {
                 Text("Tappped for more information about us")
@@ -21,6 +22,7 @@ struct AboutView: View {
                         self.isAbout.toggle()
                     })
             }) // Button
+            Spacer()
         } //VStack
         .sheet(isPresented: $isAbout, onDismiss: {
             print("Close Modal")

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BeersRow: View {
 
-    @EnvironmentObject var viewModel: BeersListViewModel
+    @EnvironmentObject var viewModel: BeersViewModel
     
     let item: BeersModelElement
     

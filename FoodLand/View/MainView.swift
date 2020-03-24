@@ -11,7 +11,7 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject var categoryListViewModel: CategoryListViewModel
-    @EnvironmentObject var beersListViewModel: BeersListViewModel
+    @EnvironmentObject var beersListViewModel: BeersViewModel
     @State var selected: Int = 0
     @State var selectedItem: Int?
     
