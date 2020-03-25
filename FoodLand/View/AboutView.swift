@@ -22,6 +22,11 @@ struct AboutView: View {
                         self.isAbout.toggle()
                     })
             }) // Button
+            NavPopButton(destination: .root) {
+                Text("Pop to Root")
+                    .foregroundColor(.green)
+                    .padding(.top, 20)
+            } // NavPopButton
             Spacer()
         } //VStack
         .sheet(isPresented: $isAbout, onDismiss: {

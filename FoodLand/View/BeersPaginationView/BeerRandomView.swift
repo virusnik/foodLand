@@ -10,19 +10,13 @@ import SwiftUI
 
 struct BeerRandomView: View {
     
-//    @State var isAbout: Bool = false
     @EnvironmentObject private var viewModel: BeersViewModel
     
     var body: some View {
         
         VStack() {
-            // What you care about displaying
             Spacer()
             Text("\(self.viewModel.name ?? "ochakovo")")
-                .onAppear() {
-                    self.viewModel.loadBeerRandom()
-            }
-            // This should be the last, put everything to the top
             Spacer()
         }
         .onAppear() {
