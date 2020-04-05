@@ -17,9 +17,12 @@ enum NetworkResponse:String {
     case unableToDecode = "We could not decode the response."
 }
 
-enum Result<String>{
-    case success
-    case failure(String)
+enum ResponseError: Error {
+    case authoriseError
+    case badRequest
+    case failed
+    case noData
+    case unableToDecode
 }
 
 struct NetworkManager {
@@ -27,11 +30,11 @@ struct NetworkManager {
     static let apiKey = ""
     let router = Router<BeersApi>()
     
-    func getBeersList(page: Int, completion: @escaping (_ beers: [BeersModelElement]?,_ error: String?)->()){
+    func getBeersList(page: Int, completion: @escaping (_ beers: [BeersModelElement]?,_ error: ResponseError?)->()){
         router.request(.beers(page: page)) { data, response, error in
             
             if error != nil {
-                completion(nil, "Please check your network connection.")
+                completion(nil, .failed)
             }
             
             if let response = response as? HTTPURLResponse {
@@ -39,7 +42,7 @@ struct NetworkManager {
                 switch result {
                 case .success:
                     guard let responseData = data else {
-                        completion(nil, NetworkResponse.noData.rawValue)
+                        completion(nil, .noData)
                         return
                     }
                     do {
@@ -50,10 +53,10 @@ struct NetworkManager {
                         completion(apiResponse,nil)
                     }catch {
                         print(error)
-                        completion(nil, NetworkResponse.unableToDecode.rawValue)
+                        completion(nil, .unableToDecode)
                     }
-                case .failure(let networkFailureError):
-                    completion(nil, networkFailureError)
+                case .failure:
+                    completion(nil, .failed)
                 }
             }
         }
@@ -84,19 +87,20 @@ struct NetworkManager {
                         print(error)
                         completion(nil, NetworkResponse.unableToDecode.rawValue)
                     }
-                case .failure(let networkFailureError):
-                    completion(nil, networkFailureError)
+                case .failure:
+                    completion(nil, "failed")
                 }
             }
         }
     }
     
-    fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
+    fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<Data, ResponseError> {
+        
         switch response.statusCode {
-        case 200...299: return .success
-        case 401...500: return .failure(NetworkResponse.authoriseError.rawValue)
-        case 501...599: return .failure(NetworkResponse.badRequest.rawValue)
-        default: return .failure(NetworkResponse.failed.rawValue)
+        case 200...299: return .success(Data())
+        case 401...500: return .failure(.authoriseError)
+        case 501...599: return .failure(.badRequest)
+        default: return .failure(.failed)
         }
     }
 }

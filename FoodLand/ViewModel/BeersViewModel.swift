@@ -25,36 +25,34 @@ final class BeersViewModel: ObservableObject {
         self.isPageLoading = true
         self.page += 1
         
-        service.makeRequest(page: self.page) { (item, error) in
-            if let item = item {
-                self.items.append(item)
+        service.fetchBeerList(page: self.page) { (result) in
+            DispatchQueue.main.async {
+                
+                switch result {
+                case .success(let beers):
+                    self.items = beers
+                case .failure(let error):
+                    print(error)
+                }
+                
+                self.isPageLoading = false
             }
+            
         }
         
-//        NetworkManager().getBeersList(page: self.page) { (item, error) in
-//            DispatchQueue.main.async {
-//                if let error = error {
-//                    print(error)
-//                }
-//                if let item = item {
-//                    self.items.append(contentsOf: item)
-//                }
-//                self.isPageLoading = false
-//            }
-//        }
     }
     
     func loadBeerRandom() {
         self.isPageLoading = true
         
-        NetworkManager().getBeerRandom() { (item, error) in
+        service.loadRandombeer { (result) in
             DispatchQueue.main.async {
-                if let error = error {
+                switch result {
+                case .success(let beers):
+                    self.items = beers
+                    self.name = beers[0].name
+                case .failure(let error):
                     print(error)
-                }
-                if let item = item {
-                    self.name = item[0].name
-                    self.items.append(contentsOf: item)
                 }
                 self.isPageLoading = false
             }
