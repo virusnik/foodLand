@@ -15,6 +15,8 @@ final class BeersViewModel: ObservableObject {
     @Published private(set) var isPageLoading: Bool = false
     @Published var name: String?
     
+    let service = BeerServiceLocator()
+    
     func loadPage() {
         
         guard !self.isPageLoading else {
@@ -23,17 +25,23 @@ final class BeersViewModel: ObservableObject {
         self.isPageLoading = true
         self.page += 1
         
-        NetworkManager().getBeersList(page: self.page) { (item, error) in
-            DispatchQueue.main.async {
-                if let error = error {
-                    print(error)
-                }
-                if let item = item {
-                    self.items.append(contentsOf: item)
-                }
-                self.isPageLoading = false
+        service.makeRequest(page: self.page) { (item, error) in
+            if let item = item {
+                self.items.append(item)
             }
         }
+        
+//        NetworkManager().getBeersList(page: self.page) { (item, error) in
+//            DispatchQueue.main.async {
+//                if let error = error {
+//                    print(error)
+//                }
+//                if let item = item {
+//                    self.items.append(contentsOf: item)
+//                }
+//                self.isPageLoading = false
+//            }
+//        }
     }
     
     func loadBeerRandom() {

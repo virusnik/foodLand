@@ -9,10 +9,12 @@
 import Foundation
 
 final class FoodListViewModel: ObservableObject {
-    @Published private(set) var foodList = [FoodListModel(foodName: "Burger Chicken"),
-                                            FoodListModel(foodName: "Burger Beef"),
-                                            FoodListModel(foodName: "Burger Chicken Hot"),
-                                            FoodListModel(foodName: "Burger Beef Hot")]
+    
+    @Published private(set) var foodList = [FoodListModel(foodName: "Burger Chicken", foodDescription: "some text"),
+                                            FoodListModel(foodName: "Burger Beef", foodDescription: "some text"),
+                                            FoodListModel(foodName: "Burger Chicken Hot", foodDescription: "some text"),
+                                            FoodListModel(foodName: "Burger Beef Hot", foodDescription: "some text")]
+    
     
     @Published private(set) var items = [[Int]]()
     

@@ -29,6 +29,7 @@
 		362FE32B2420BBBB00D9F1F8 /* NavPushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE32A2420BBBB00D9F1F8 /* NavPushButton.swift */; };
 		362FE32D2420BBDF00D9F1F8 /* NavPopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE32C2420BBDF00D9F1F8 /* NavPopButton.swift */; };
 		362FE32F2420C49000D9F1F8 /* BeerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE32E2420C49000D9F1F8 /* BeerDetailsView.swift */; };
+		36808BCF2430A53A00BBA82B /* BeerServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36808BCE2430A53A00BBA82B /* BeerServiceLocator.swift */; };
 		36ABB041241668E80022D7C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ABB040241668E80022D7C6 /* Constants.swift */; };
 		36AF7C64240D3A5500FFF9B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7C63240D3A5500FFF9B0 /* AppDelegate.swift */; };
 		36AF7C66240D3A5500FFF9B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7C65240D3A5500FFF9B0 /* SceneDelegate.swift */; };
@@ -93,6 +94,7 @@
 		362FE32A2420BBBB00D9F1F8 /* NavPushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavPushButton.swift; sourceTree = "<group>"; };
 		362FE32C2420BBDF00D9F1F8 /* NavPopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavPopButton.swift; sourceTree = "<group>"; };
 		362FE32E2420C49000D9F1F8 /* BeerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsView.swift; sourceTree = "<group>"; };
+		36808BCE2430A53A00BBA82B /* BeerServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerServiceLocator.swift; sourceTree = "<group>"; };
 		36ABB040241668E80022D7C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		36AF7C60240D3A5500FFF9B0 /* FoodLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36AF7C63240D3A5500FFF9B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +221,14 @@
 			path = BeersPaginationView;
 			sourceTree = "<group>";
 		};
+		36808BCD2430A52200BBA82B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				36808BCE2430A53A00BBA82B /* BeerServiceLocator.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		36ABB03F24164FA10022D7C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +249,7 @@
 		36ABB04224166BE50022D7C6 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				36808BCD2430A52200BBA82B /* Service */,
 				36AF7C63240D3A5500FFF9B0 /* AppDelegate.swift */,
 				36AF7C65240D3A5500FFF9B0 /* SceneDelegate.swift */,
 				36ABB040241668E80022D7C6 /* Constants.swift */,
@@ -507,6 +518,7 @@
 				36AF7C66240D3A5500FFF9B0 /* SceneDelegate.swift in Sources */,
 				36AF7C98240D41E800FFF9B0 /* CategoryListViewModel.swift in Sources */,
 				7F5896FD241932560019F22C /* TwoColumnView.swift in Sources */,
+				36808BCF2430A53A00BBA82B /* BeerServiceLocator.swift in Sources */,
 				362FE2F9241F73BE00D9F1F8 /* Beers.swift in Sources */,
 				36AF7C9C2410225700FFF9B0 /* DishListView.swift in Sources */,
 				362FE30C241FB58500D9F1F8 /* HTTPMethod.swift in Sources */,

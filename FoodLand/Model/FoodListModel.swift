@@ -11,4 +11,5 @@ import Foundation
 struct FoodListModel: Identifiable {
     var id = UUID()
     var foodName: String
+    var foodDescription: String
 }
