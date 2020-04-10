@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ImagePackage",
+        "repositoryURL": "git@github.com:virusnik/ImagePackage.git",
+        "state": {
+          "branch": null,
+          "revision": "885156fc91acfdfb3430b2c433aa92325877895e",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

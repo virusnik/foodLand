@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import ImagePackage
 
 struct BeerDetailsView: View {
     
@@ -15,9 +16,15 @@ struct BeerDetailsView: View {
     
     
     var body: some View {
-        VStack {
+        
+        let imageManager = ImagesManager(resourseURL: URL(string: self.item.imageURL ?? String()))
+        return VStack {
             ScrollView {
-                ImageViewContainer(imageUrl: self.item.imageURL)
+                ImageViewContainer(remoteImageUrl: imageManager, placeholder: Image("beer")) {
+                    $0
+                    .resizable()
+                    .scaledToFit()
+                }
                 Text("\(self.item.name ?? "Name")")
                     .font(.title)
                 Text(("\(self.item.description ?? "Description")"))

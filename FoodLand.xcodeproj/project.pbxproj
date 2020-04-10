@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3615B6CD2429DF210079B7BF /* ImagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3615B6CC2429DF210079B7BF /* ImagesManager.swift */; };
-		3615B6CF2429E30B0079B7BF /* ImageViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3615B6CE2429E30B0079B7BF /* ImageViewContainer.swift */; };
 		362FE2F5241E136500D9F1F8 /* BeersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE2F4241E136500D9F1F8 /* BeersViewModel.swift */; };
 		362FE2F7241E182100D9F1F8 /* ExtensionsRandomAccsess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE2F6241E182100D9F1F8 /* ExtensionsRandomAccsess.swift */; };
 		362FE2F9241F73BE00D9F1F8 /* Beers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE2F8241F73BE00D9F1F8 /* Beers.swift */; };
@@ -49,6 +47,7 @@
 		36AF7CA42411073800FFF9B0 /* FoodListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7CA32411073800FFF9B0 /* FoodListModel.swift */; };
 		36AF7CA62411102D00FFF9B0 /* FoodListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7CA52411102D00FFF9B0 /* FoodListViewModel.swift */; };
 		36AF7CAA241170CB00FFF9B0 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7CA9241170CB00FFF9B0 /* ActivityIndicator.swift */; };
+		36C65CBA2440F23000502159 /* ImagePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 36C65CB92440F23000502159 /* ImagePackage */; };
 		36E2D645241D3523003D54C0 /* PunkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E2D644241D3523003D54C0 /* PunkView.swift */; };
 		36E2D647241D35AA003D54C0 /* BeerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E2D646241D35AA003D54C0 /* BeerListView.swift */; };
 		7F5896FD241932560019F22C /* TwoColumnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5896FC241932560019F22C /* TwoColumnView.swift */; };
@@ -72,8 +71,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3615B6CC2429DF210079B7BF /* ImagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesManager.swift; sourceTree = "<group>"; };
-		3615B6CE2429E30B0079B7BF /* ImageViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewContainer.swift; sourceTree = "<group>"; };
 		362FE2F4241E136500D9F1F8 /* BeersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeersViewModel.swift; sourceTree = "<group>"; };
 		362FE2F6241E182100D9F1F8 /* ExtensionsRandomAccsess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsRandomAccsess.swift; sourceTree = "<group>"; };
 		362FE2F8241F73BE00D9F1F8 /* Beers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beers.swift; sourceTree = "<group>"; };
@@ -130,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36C65CBA2440F23000502159 /* ImagePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +182,6 @@
 			isa = PBXGroup;
 			children = (
 				362FE305241FB4FB00D9F1F8 /* NetworkManager.swift */,
-				3615B6CC2429DF210079B7BF /* ImagesManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -241,7 +238,6 @@
 				36AF7C95240D415F00FFF9B0 /* AboutView.swift */,
 				36AF7C9D2410253100FFF9B0 /* AboutViewModal.swift */,
 				7F5896FC241932560019F22C /* TwoColumnView.swift */,
-				3615B6CE2429E30B0079B7BF /* ImageViewContainer.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,6 +269,7 @@
 				36AF7C79240D3A5700FFF9B0 /* FoodLandTests */,
 				36AF7C84240D3A5700FFF9B0 /* FoodLandUITests */,
 				36AF7C61240D3A5500FFF9B0 /* Products */,
+				36C92366243B95BA001EDF84 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -351,6 +348,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		36C92366243B95BA001EDF84 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -368,6 +372,7 @@
 			);
 			name = FoodLand;
 			packageProductDependencies = (
+				36C65CB92440F23000502159 /* ImagePackage */,
 			);
 			productName = FoodLand;
 			productReference = 36AF7C60240D3A5500FFF9B0 /* FoodLand.app */;
@@ -442,6 +447,7 @@
 			);
 			mainGroup = 36AF7C57240D3A5500FFF9B0;
 			packageReferences = (
+				36C65CB82440F23000502159 /* XCRemoteSwiftPackageReference "ImagePackage" */,
 			);
 			productRefGroup = 36AF7C61240D3A5500FFF9B0 /* Products */;
 			projectDirPath = "";
@@ -490,7 +496,6 @@
 				36AF7C64240D3A5500FFF9B0 /* AppDelegate.swift in Sources */,
 				36E2D645241D3523003D54C0 /* PunkView.swift in Sources */,
 				36AF7CA62411102D00FFF9B0 /* FoodListViewModel.swift in Sources */,
-				3615B6CF2429E30B0079B7BF /* ImageViewContainer.swift in Sources */,
 				362FE2F7241E182100D9F1F8 /* ExtensionsRandomAccsess.swift in Sources */,
 				362FE31A2420962E00D9F1F8 /* BeersRow.swift in Sources */,
 				36AF7CA42411073800FFF9B0 /* FoodListModel.swift in Sources */,
@@ -505,7 +510,6 @@
 				36AF7C9E2410253100FFF9B0 /* AboutViewModal.swift in Sources */,
 				362FE32B2420BBBB00D9F1F8 /* NavPushButton.swift in Sources */,
 				362FE3272420B81F00D9F1F8 /* NavControllerViewModel.swift in Sources */,
-				3615B6CD2429DF210079B7BF /* ImagesManager.swift in Sources */,
 				362FE306241FB4FB00D9F1F8 /* NetworkManager.swift in Sources */,
 				362FE310241FB5B800D9F1F8 /* ParametrEncoding.swift in Sources */,
 				36AF7C9A240FD5F700FFF9B0 /* CategoryListModel.swift in Sources */,
@@ -850,6 +854,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		36C65CB82440F23000502159 /* XCRemoteSwiftPackageReference "ImagePackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:virusnik/ImagePackage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		36C65CB92440F23000502159 /* ImagePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36C65CB82440F23000502159 /* XCRemoteSwiftPackageReference "ImagePackage" */;
+			productName = ImagePackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 36AF7C58240D3A5500FFF9B0 /* Project object */;
 }
