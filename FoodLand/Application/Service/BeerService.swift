@@ -8,12 +8,12 @@
 
 import Foundation
 
-protocol BeerServiceLocatorProtocol {
+protocol BeerServiceProtocol {
     func fetchBeerList(page: Int, completion: @escaping (Result<[BeersModelElement], Error>) -> Void)
     func loadRandombeer(completion: @escaping (Result<[BeersModelElement], Error>) -> Void)
 }
 
-struct BeerServiceLocator: BeerServiceLocatorProtocol {
+struct BeerService: BeerServiceProtocol {
     
     func loadRandombeer(completion: @escaping (Result<[BeersModelElement], Error>) -> Void) {
         NetworkManager().getBeerRandom { (beersModel, error) in

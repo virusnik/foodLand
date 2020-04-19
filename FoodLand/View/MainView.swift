@@ -47,8 +47,8 @@ struct MainView: View {
             PunkView()
                 .tag(3)
                 .tabItem {
-                    Text("Column")
-                    Image(systemName: "hexagon")
+                    Text(Constants.TabBarTitle.beers)
+                    Image(systemName: Constants.TabBarImageName.beers)
             }
             
         }

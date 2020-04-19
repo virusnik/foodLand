@@ -21,6 +21,10 @@ struct BeerRandomView: View {
         }
         .onAppear() {
             self.viewModel.loadBeerRandom()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.viewModel.retrievedBeer()
+            }
         }
         .navigationBarTitle(Text("Random Beer"))
         

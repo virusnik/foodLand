@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Disk
 
 final class BeersViewModel: ObservableObject {
     
@@ -15,7 +16,9 @@ final class BeersViewModel: ObservableObject {
     @Published private(set) var isPageLoading: Bool = false
     @Published var name: String?
     
-    let service = BeerServiceLocator()
+    private var documentDir: NSString!
+    
+    let service = BeerService()
     
     func loadPage() {
         
@@ -45,17 +48,46 @@ final class BeersViewModel: ObservableObject {
     func loadBeerRandom() {
         self.isPageLoading = true
         
-        service.loadRandombeer { (result) in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let beers):
-                    self.items = beers
-                    self.name = beers[0].name
-                case .failure(let error):
-                    print(error)
+        if Disk.exists("beers.json", in: .documents) {
+            retrievedBeer()
+        } else {
+            service.loadRandombeer { (result) in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let beers):
+                        do {
+                            try Disk.save(beers, to: .documents, as: "beers.json")
+                            
+                            let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+                            self.documentDir = dirPaths[0] as NSString
+                            debugPrint("path : \(String(describing: self.documentDir))")
+                        } catch let error as NSError {
+                            fatalError("""
+                                Code: \(error.code)
+                                Description: \(error.localizedDescription)
+                                """)
+                        }
+                        debugPrint("Saved beers to disk")
+                    case .failure(let error):
+                        print(error)
+                    }
+                    self.isPageLoading = false
                 }
-                self.isPageLoading = false
             }
+        }
+        
+        
+    }
+    
+    func retrievedBeer() {
+        if let retrievedBeers = try? Disk.retrieve("beers.json", from: .documents, as: [BeersModelElement].self) {
+            
+            var result: String = ""
+            for item in retrievedBeers {
+                result.append("\(item.name ?? String())\n\n\(item.description ?? String())")
+            }
+            self.name = result
+            debugPrint("Retrieved beers from disk")
         }
     }
     

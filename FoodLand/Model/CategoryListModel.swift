@@ -11,4 +11,6 @@ import Foundation
 struct CategoryListModel: Identifiable {
     var id = UUID()
     var categoryName: String
+    var foodListModel: [FoodListModel]
+    var expanded = false
 }

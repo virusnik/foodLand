@@ -9,7 +9,7 @@
 import Foundation
 
 final class CategoryListViewModel: ObservableObject {
-    @Published private(set) var category = [CategoryListModel]()
+    @Published var category = [CategoryListModel]()
     
     @Published private(set) var isLoading = false
     
@@ -20,11 +20,11 @@ final class CategoryListViewModel: ObservableObject {
     func loadfromServer() {
         isLoading = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.category = [CategoryListModel(categoryName: "FastFood"),
-            CategoryListModel(categoryName: "Food"),
-            CategoryListModel(categoryName: "Snack"),
-            CategoryListModel(categoryName: "Drinks"),
-            CategoryListModel(categoryName: "Hookah"),]
+            self.category = [CategoryListModel(categoryName: "FastFood", foodListModel: [FoodListModel(foodImage: "image", foodName: "Burger Chicken", foodDescription: "Chicken burger, sauce, tomato", price: 200), FoodListModel(foodImage: "image", foodName: "Burger Beaf", foodDescription: "Fresh meat, sauce, onion, garlic", price: 220)]),
+                             CategoryListModel(categoryName: "Food", foodListModel: [FoodListModel(foodImage: "image", foodName: "Pasta", foodDescription: "makaron, pasta", price: 300), FoodListModel(foodImage: "image", foodName: "chicken wings", foodDescription: "sauce garlic, chiken", price: 330)]),
+                             CategoryListModel(categoryName: "Snack", foodListModel: [FoodListModel(foodImage: "image", foodName: "Snikers", foodDescription: "chocolate and arahis", price: 50), FoodListModel(foodImage: "image", foodName: "Bounty", foodDescription: "cocos, chocolate", price: 55)]),
+                             CategoryListModel(categoryName: "Drinks", foodListModel: [FoodListModel(foodImage: "image", foodName: "Wisky", foodDescription: "solod, alcohol", price: 150)]),
+                             CategoryListModel(categoryName: "Hookah", foodListModel: [FoodListModel(foodImage: "image", foodName: "DarkSide", foodDescription: "hight tabacoo", price: 400)]),]
             self.isLoading = false
         }
     }

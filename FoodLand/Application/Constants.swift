@@ -15,12 +15,14 @@ struct Constants {
         static let main = "triangle"
         static let menu = "app"
         static let about = "circle"
+        static let beers = "hexagon"
     }
     
     struct TabBarTitle {
         static let main = "Home"
         static let menu = "Menu"
         static let about = "About"
+        static let beers = "Beers"
     }
     
     struct ProductionServer {

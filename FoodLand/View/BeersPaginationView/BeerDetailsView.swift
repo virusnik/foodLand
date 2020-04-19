@@ -24,6 +24,7 @@ struct BeerDetailsView: View {
                     $0
                     .resizable()
                     .scaledToFit()
+                    .frame(width: 360.0, height: 400.0)
                 }
                 Text("\(self.item.name ?? "Name")")
                     .font(.title)

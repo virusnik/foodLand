@@ -10,6 +10,7 @@ import SwiftUI
 
 struct BeerListView: View {
     @EnvironmentObject private var viewModel: BeersViewModel
+//    let locator = ServiceLocator()
     
     var body: some View {
         List(viewModel.items) { item in
