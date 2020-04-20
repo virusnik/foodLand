@@ -29,6 +29,10 @@
 		362FE32F2420C49000D9F1F8 /* BeerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE32E2420C49000D9F1F8 /* BeerDetailsView.swift */; };
 		36666F8424476EC300EDF3F3 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36666F8324476EC300EDF3F3 /* ServiceLocator.swift */; };
 		36737A01244C50EF00FBFDDC /* Disk in Frameworks */ = {isa = PBXBuildFile; productRef = 36737A00244C50EF00FBFDDC /* Disk */; };
+		36737A04244C80A200FBFDDC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 36737A03244C80A200FBFDDC /* Realm */; };
+		36737A06244C80A200FBFDDC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 36737A05244C80A200FBFDDC /* RealmSwift */; };
+		36737A09244CB05000FBFDDC /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36737A08244CB05000FBFDDC /* RealmData.swift */; };
+		36737A0B244CB19900FBFDDC /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36737A0A244CB19900FBFDDC /* RealmExtension.swift */; };
 		36808BCF2430A53A00BBA82B /* BeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36808BCE2430A53A00BBA82B /* BeerService.swift */; };
 		36ABB041241668E80022D7C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ABB040241668E80022D7C6 /* Constants.swift */; };
 		36AF7C64240D3A5500FFF9B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7C63240D3A5500FFF9B0 /* AppDelegate.swift */; };
@@ -96,6 +100,8 @@
 		362FE32C2420BBDF00D9F1F8 /* NavPopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavPopButton.swift; sourceTree = "<group>"; };
 		362FE32E2420C49000D9F1F8 /* BeerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsView.swift; sourceTree = "<group>"; };
 		36666F8324476EC300EDF3F3 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		36737A08244CB05000FBFDDC /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
+		36737A0A244CB19900FBFDDC /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
 		36808BCE2430A53A00BBA82B /* BeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerService.swift; sourceTree = "<group>"; };
 		36ABB040241668E80022D7C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		36AF7C60240D3A5500FFF9B0 /* FoodLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +140,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36737A06244C80A200FBFDDC /* RealmSwift in Frameworks */,
+				36737A04244C80A200FBFDDC /* Realm in Frameworks */,
 				36C65CBA2440F23000502159 /* ImagePackage in Frameworks */,
 				36737A01244C50EF00FBFDDC /* Disk in Frameworks */,
 			);
@@ -234,6 +242,15 @@
 			path = di;
 			sourceTree = "<group>";
 		};
+		36737A07244CB03800FBFDDC /* RealmData */ = {
+			isa = PBXGroup;
+			children = (
+				36737A08244CB05000FBFDDC /* RealmData.swift */,
+				36737A0A244CB19900FBFDDC /* RealmExtension.swift */,
+			);
+			path = RealmData;
+			sourceTree = "<group>";
+		};
 		36808BCD2430A52200BBA82B /* Service */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +322,7 @@
 		36AF7C62240D3A5500FFF9B0 /* FoodLand */ = {
 			isa = PBXGroup;
 			children = (
+				36737A07244CB03800FBFDDC /* RealmData */,
 				36ABB04224166BE50022D7C6 /* Application */,
 				36AF7CA12410FE8800FFF9B0 /* Model */,
 				36ABB03F24164FA10022D7C6 /* View */,
@@ -393,6 +411,8 @@
 			packageProductDependencies = (
 				36C65CB92440F23000502159 /* ImagePackage */,
 				36737A00244C50EF00FBFDDC /* Disk */,
+				36737A03244C80A200FBFDDC /* Realm */,
+				36737A05244C80A200FBFDDC /* RealmSwift */,
 			);
 			productName = FoodLand;
 			productReference = 36AF7C60240D3A5500FFF9B0 /* FoodLand.app */;
@@ -469,6 +489,7 @@
 			packageReferences = (
 				36C65CB82440F23000502159 /* XCRemoteSwiftPackageReference "ImagePackage" */,
 				367379FF244C50EF00FBFDDC /* XCRemoteSwiftPackageReference "Disk" */,
+				36737A02244C80A200FBFDDC /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 			);
 			productRefGroup = 36AF7C61240D3A5500FFF9B0 /* Products */;
 			projectDirPath = "";
@@ -538,6 +559,7 @@
 				36E2D647241D35AA003D54C0 /* BeerListView.swift in Sources */,
 				362FE316241FB62E00D9F1F8 /* BeersAPI.swift in Sources */,
 				362FE3252420B7C000D9F1F8 /* NavControllerView.swift in Sources */,
+				36737A09244CB05000FBFDDC /* RealmData.swift in Sources */,
 				36DE16422443856000275D4E /* HeaderView.swift in Sources */,
 				362FE3292420B89300D9F1F8 /* Screen.swift in Sources */,
 				362FE2F5241E136500D9F1F8 /* BeersViewModel.swift in Sources */,
@@ -545,6 +567,7 @@
 				36AF7C98240D41E800FFF9B0 /* CategoryListViewModel.swift in Sources */,
 				7F5896FD241932560019F22C /* TwoColumnView.swift in Sources */,
 				36808BCF2430A53A00BBA82B /* BeerService.swift in Sources */,
+				36737A0B244CB19900FBFDDC /* RealmExtension.swift in Sources */,
 				362FE2F9241F73BE00D9F1F8 /* Beers.swift in Sources */,
 				36666F8424476EC300EDF3F3 /* ServiceLocator.swift in Sources */,
 				36AF7C9C2410225700FFF9B0 /* DishListView.swift in Sources */,
@@ -888,6 +911,14 @@
 				minimumVersion = 0.6.4;
 			};
 		};
+		36737A02244C80A200FBFDDC /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.1;
+			};
+		};
 		36C65CB82440F23000502159 /* XCRemoteSwiftPackageReference "ImagePackage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:virusnik/ImagePackage.git";
@@ -903,6 +934,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 367379FF244C50EF00FBFDDC /* XCRemoteSwiftPackageReference "Disk" */;
 			productName = Disk;
+		};
+		36737A03244C80A200FBFDDC /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36737A02244C80A200FBFDDC /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		36737A05244C80A200FBFDDC /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36737A02244C80A200FBFDDC /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
 		};
 		36C65CB92440F23000502159 /* ImagePackage */ = {
 			isa = XCSwiftPackageProductDependency;

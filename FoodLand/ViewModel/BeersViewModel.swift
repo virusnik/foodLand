@@ -84,7 +84,7 @@ final class BeersViewModel: ObservableObject {
             
             var result: String = ""
             for item in retrievedBeers {
-                result.append("\(item.name ?? String())\n\n\(item.description ?? String())")
+                result.append("\(item.name ?? String())\n\n\(item.descriptionBeer ?? String())")
             }
             self.name = result
             debugPrint("Retrieved beers from disk")

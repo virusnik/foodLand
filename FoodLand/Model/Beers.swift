@@ -7,15 +7,16 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct BeersModelElement: Codable {
-    let name: String?
-    let description: String?
-    let imageURL: String?
+@objcMembers class BeersModelElement: Object, Codable {
+    dynamic var  name: String?
+    dynamic var descriptionBeer: String?
+    dynamic var imageURL: String?
     
     enum CodingKeys: String, CodingKey {
         case name
-        case description
+        case descriptionBeer = "description"
         case imageURL = "image_url"
     }
 }

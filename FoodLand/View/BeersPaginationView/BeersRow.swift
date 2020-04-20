@@ -30,7 +30,7 @@ struct BeersRow: View {
                 Text(item.name ?? "")
                     .font(.headline)
                     
-                Text(item.description ?? "")
+                Text(item.descriptionBeer ?? "")
                     .fixedSize(horizontal: false, vertical: true)
                     .lineLimit(2)
                     .font(.callout)

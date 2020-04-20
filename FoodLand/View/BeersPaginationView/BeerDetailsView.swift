@@ -28,7 +28,7 @@ struct BeerDetailsView: View {
                 }
                 Text("\(self.item.name ?? "Name")")
                     .font(.title)
-                Text(("\(self.item.description ?? "Description")"))
+                Text(("\(self.item.descriptionBeer ?? "Description")"))
                     .font(.body)
                     .padding(20)
                 HStack {

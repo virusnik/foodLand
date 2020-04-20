@@ -45,18 +45,25 @@ struct NetworkManager {
                         completion(nil, .noData)
                         return
                     }
-                    do {
-                        print(responseData)
-                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
-                        print(jsonData)
-                        let apiResponse = try JSONDecoder().decode([BeersModelElement].self, from: responseData)
-                        completion(apiResponse,nil)
-                    }catch {
-                        print(error)
-                        completion(nil, .unableToDecode)
+                    DispatchQueue.main.async {
+                        do {
+                            print(responseData)
+                            let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
+                            print(jsonData)
+                            let apiResponse = try JSONDecoder().decode([BeersModelElement].self, from: responseData)
+                            RealmData.shared.writeData(apiResponse)
+                            
+                            completion(apiResponse,nil)
+                        } catch {
+                            print(error)
+                            completion(nil, .unableToDecode)
+                        }
                     }
+                    
                 case .failure:
-                    completion(nil, .failed)
+                    RealmData.shared.getRealmData { (beers: [BeersModelElement]) in
+                        completion(beers, .failed)
+                    }
                 }
             }
         }
