@@ -10,8 +10,24 @@ import Foundation
 
 class ServiceLocator {
     
-    var beerService: BeerServiceProtocol {
-        return BeerService()
+    private lazy var services: [String: Any] = [:]
+    
+    static var shared = ServiceLocator()
+    
+    func register<T>(_ service: T) {
+        let key = "\(type(of: T.self))"
+        services[key] = service
     }
     
+    func instance<T>() -> T? {
+        let key = "\(type(of: T.self))"
+        return services[key] as? T
+    }
+    
+}
+
+extension ServiceLocator {
+    func registerDefaultServices() {
+        register(BeerService() as BeerServiceProtocol)
+    }
 }

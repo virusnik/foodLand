@@ -13,12 +13,15 @@ protocol BeerServiceProtocol {
     func loadRandombeer(completion: @escaping (Result<[BeersModelElement], Error>) -> Void)
 }
 
-struct BeerService: BeerServiceProtocol {
+class BeerService: BeerServiceProtocol {
+    private let networkManager = NetworkManager()
     
     func loadRandombeer(completion: @escaping (Result<[BeersModelElement], Error>) -> Void) {
-        NetworkManager().getBeerRandom { (beersModel, error) in
+        networkManager.getBeerRandom { (beersModel, error) in
             guard let beers = beersModel else {
-                completion(.failure(error as! Error))
+                let errMessage = error ?? Constants.noConnection as! Error
+                let error = NSError(domain: "BeerRandomService", code: 1, userInfo: [NSLocalizedDescriptionKey: errMessage])
+                completion(.failure(error))
                 return
             }
             completion(.success(beers))
@@ -26,14 +29,21 @@ struct BeerService: BeerServiceProtocol {
     }
     
     func fetchBeerList(page: Int, completion: @escaping (Result<[BeersModelElement], Error>) -> Void) {
-        NetworkManager().getBeersList(page: page) { (beersModel, error) in
+        networkManager.getBeersList(page: page) { (beersModel, error) in
             guard let beers = beersModel else {
                 let errMessage = error ?? "Can't load beers list" as! Error
                 let error = NSError(domain: "BeerService", code: 1, userInfo: [NSLocalizedDescriptionKey: errMessage])
                 completion(.failure(error))
+                RealmData.shared.getRealmData { (beers: [BeersModelElement]) in completion(.success(beers)) }
                 return
             }
-            completion(.success(beers))
+            if beers.isEmpty {
+                RealmData.shared.getRealmData { (beers: [BeersModelElement]) in completion(.success(beers)) }
+            } else {
+                RealmData.shared.writeData(beers)
+                completion(.success(beers))
+            }
+            
         }
     }
     

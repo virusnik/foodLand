@@ -27,6 +27,9 @@ struct BeerRandomView: View {
             }
         }
         .navigationBarTitle(Text("Random Beer"))
+        .alert(isPresented: $viewModel.isNotConnected) {
+            Alert(title: Text("No connection"), message: Text("You are not connection to the internet."), dismissButton: .default(Text("OK")))
+        }
         
     }
 }

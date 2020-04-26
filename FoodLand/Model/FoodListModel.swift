@@ -8,10 +8,17 @@
 
 import Foundation
 
-struct FoodListModel: Identifiable {
+struct FoodListModel: Identifiable, Codable {
     var id = UUID()
     var foodImage: String
     var foodName: String
     var foodDescription: String
     var price: Double
 }
+
+//extension FoodListModel: Identifiable {
+////    public var id: String {
+////        self.foodName ?? UUID().uuidString
+////    }
+//    public
+//}

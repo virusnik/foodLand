@@ -15,10 +15,11 @@ final class BeersViewModel: ObservableObject {
     @Published private(set) var page: Int = 1
     @Published private(set) var isPageLoading: Bool = false
     @Published var name: String?
+    @Published var isNotConnected: Bool = false
     
     private var documentDir: NSString!
     
-    let service = BeerService()
+    private let beerService: BeerServiceProtocol? = ServiceLocator.shared.instance()
     
     func loadPage() {
         
@@ -27,15 +28,17 @@ final class BeersViewModel: ObservableObject {
         }
         self.isPageLoading = true
         self.page += 1
-        
-        service.fetchBeerList(page: self.page) { (result) in
+        beerService?.fetchBeerList(page: self.page) { (result) in
             DispatchQueue.main.async {
                 
                 switch result {
                 case .success(let beers):
                     self.items = beers
-                case .failure(let error):
+                case .failure(let error as NSError):
                     print(error)
+                    if error.code == 1 {
+                        self.isNotConnected = true
+                    }
                 }
                 
                 self.isPageLoading = false
@@ -51,7 +54,7 @@ final class BeersViewModel: ObservableObject {
         if Disk.exists("beers.json", in: .documents) {
             retrievedBeer()
         } else {
-            service.loadRandombeer { (result) in
+            beerService?.loadRandombeer { (result) in
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let beers):
@@ -68,8 +71,11 @@ final class BeersViewModel: ObservableObject {
                                 """)
                         }
                         debugPrint("Saved beers to disk")
-                    case .failure(let error):
+                    case .failure(let error as NSError):
                         print(error)
+                        if error.code == 1 {
+                            self.isNotConnected = true
+                        }
                     }
                     self.isPageLoading = false
                 }
@@ -92,5 +98,3 @@ final class BeersViewModel: ObservableObject {
     }
     
 }
-
-

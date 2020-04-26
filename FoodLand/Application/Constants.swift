@@ -11,6 +11,8 @@ import Foundation
 
 struct Constants {
     
+    static let noConnection = "NoConnection"
+    
     struct TabBarImageName {
         static let main = "triangle"
         static let menu = "app"

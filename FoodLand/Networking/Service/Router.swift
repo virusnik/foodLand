@@ -18,6 +18,7 @@ protocol NetworkRouter: class {
 
 class Router<EndPoint: EndPointType>: NetworkRouter {
     private var task: URLSessionTask?
+    private let networkMonitor = NetworkConnectionMonitor()
     
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         let session = URLSession.shared
@@ -27,10 +28,14 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
             task = session.dataTask(with: request, completionHandler: { data, response, error in
                 completion(data, response, error)
             })
-        }catch {
+        } catch {
+            if !self.networkMonitor.isConnected {
+                completion(nil, nil, Constants.noConnection as? Error)
+            }
             completion(nil, nil, error)
         }
         self.task?.resume()
+        
     }
     
     func cancel() {

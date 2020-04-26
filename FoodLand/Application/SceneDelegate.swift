@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .environmentObject(CategoryListViewModel())
             .environmentObject(FoodListViewModel())
             .environmentObject(BeersViewModel())
+            .environmentObject(FoodRowViewModel())
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

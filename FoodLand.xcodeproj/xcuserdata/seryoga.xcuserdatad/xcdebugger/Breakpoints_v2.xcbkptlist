@@ -322,15 +322,317 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2D4A5DC8-3D21-4DB8-B9B0-61306300A358"
+            uuid = "6CFDC164-BE26-45CC-9E58-A87254AF55FA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/Networking/Service/Router.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "request(_:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9D2001B-1597-4014-8E56-9F4077D6724B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/ViewModel/BeersViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "loadBeerRandom()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8617B8A1-8A1B-4D08-8BF2-0E3F705ECAF2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/Application/Service/BeerService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "loadRandombeer(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2060625B-E896-4E70-BF6E-85D1801DB713"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/Application/Service/BeerService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "loadRandombeer(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FBDB2441-25B1-4A22-95FF-ED15918460EB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/Application/Service/BeerService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "loadRandombeer(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FBDB2441-25B1-4A22-95FF-ED15918460EB - 605b02314eb5ac4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodLand.BeerService.loadRandombeer(completion: (Swift.Result&lt;Swift.Array&lt;FoodLand.BeersModelElement&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/Application/Service/BeerService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "37">
+               </Location>
+               <Location
+                  uuid = "FBDB2441-25B1-4A22-95FF-ED15918460EB - 21a0b6fb1546fbba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;FoodLand.BeersModelElement&gt;&gt;, Swift.Optional&lt;FoodLand.ResponseError&gt;) -&gt; () in FoodLand.BeerService.loadRandombeer(completion: (Swift.Result&lt;Swift.Array&lt;FoodLand.BeersModelElement&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/Application/Service/BeerService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "185">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49D3F129-D6F3-4786-9003-856A87C56B06"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/Networking/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "getBeerRandom(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA7A9347-D79A-40DA-A270-83F6A097D8DA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/Networking/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "handleNetworkResponse(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46ACDF46-55E4-46F6-B9EF-7D29DB3946D1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/Networking/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "handleNetworkResponse(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA7A93D3-729E-4E5B-A714-8361D67AE46B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/Networking/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "handleNetworkResponse(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EA7A93D3-729E-4E5B-A714-8361D67AE46B - 4d044115ec725fc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodLand.NetworkManager.(handleNetworkResponse in _63BC0CE6669C75CCA6152890E39D7C64)(__C.NSHTTPURLResponse) -&gt; Swift.Result&lt;Foundation.Data, FoodLand.ResponseError&gt;"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/Networking/Manager/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "111">
+               </Location>
+               <Location
+                  uuid = "EA7A93D3-729E-4E5B-A714-8361D67AE46B - 4d044115ec725fc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodLand.NetworkManager.(handleNetworkResponse in _63BC0CE6669C75CCA6152890E39D7C64)(__C.NSHTTPURLResponse) -&gt; Swift.Result&lt;Foundation.Data, FoodLand.ResponseError&gt;"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/Networking/Manager/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "EA7A93D3-729E-4E5B-A714-8361D67AE46B - 4d044115ec725fc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodLand.NetworkManager.(handleNetworkResponse in _63BC0CE6669C75CCA6152890E39D7C64)(__C.NSHTTPURLResponse) -&gt; Swift.Result&lt;Foundation.Data, FoodLand.ResponseError&gt;"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/Networking/Manager/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "355">
+               </Location>
+               <Location
+                  uuid = "EA7A93D3-729E-4E5B-A714-8361D67AE46B - 4d044115ec725fc0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FoodLand.NetworkManager.(handleNetworkResponse in _63BC0CE6669C75CCA6152890E39D7C64)(__C.NSHTTPURLResponse) -&gt; Swift.Result&lt;Foundation.Data, FoodLand.ResponseError&gt;"
+                  moduleName = "FoodLand"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/Networking/Manager/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "536">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97B263F7-1706-42C3-8634-ABD9A1EDE465"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/Networking/Manager/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "getBeerRandom(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F76DFD75-4BEE-4586-B169-569FB44FFB31"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/Application/Service/BeerService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "loadRandombeer(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FEAD0E4-93A6-416F-8A98-D0CFB416C3ED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/Application/Service/BeerService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "BeerServiceProtocol"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D8A4FD0-631E-444F-A9FB-870600FBF699"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FoodLand/Application/Service/BeerService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "loadRandombeer(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F0C1A2FC-6D2A-4A5A-88E3-F4ABA2DE2254"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodLand/Networking/Manager/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "getBeersList(page:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -338,81 +640,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C384E536-8497-4FD2-B8D1-DEED4CD12850"
-            shouldBeEnabled = "No"
+            uuid = "044CD0DF-4D6D-43C7-A9FD-10D48EF9AE38"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FoodLand/Networking/Manager/NetworkManager.swift"
+            filePath = "FoodLand/ViewModel/BeersViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "getBeersList(page:completion:)"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "loadBeerRandom()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "76E11A9E-FDFB-43CD-AFB5-E8753A5DA214"
+            uuid = "4F21A005-DBBC-462F-B06D-90A3BC3CD66E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FoodLand/Networking/Manager/NetworkManager.swift"
+            filePath = "FoodLand/Networking/Service/Router.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "getBeersList(page:completion:)"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "request(_:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "41F4FB8A-ABD4-4F04-8B7B-EF3895C99593"
-            shouldBeEnabled = "No"
+            uuid = "7DA0331F-D23A-4F03-9DF6-D634AD47143F"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FoodLand/Networking/Manager/NetworkManager.swift"
+            filePath = "FoodLand/ViewModel/BeersViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "getBeersList(page:completion:)"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "loadPage()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "41F4FB8A-ABD4-4F04-8B7B-EF3895C99593 - e4be1eba04a2c83e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FoodLand.NetworkManager.getBeersList(page: Swift.Int, completion: (Swift.Optional&lt;Swift.Array&lt;FoodLand.BeersModelElement&gt;&gt;, Swift.Optional&lt;FoodLand.ResponseError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "FoodLand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/Networking/Manager/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "64"
-                  endingLineNumber = "64"
-                  offsetFromSymbolStart = "1503">
-               </Location>
-               <Location
-                  uuid = "41F4FB8A-ABD4-4F04-8B7B-EF3895C99593 - df6bca21ae2841da"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Array&lt;FoodLand.BeersModelElement&gt;) -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in FoodLand.NetworkManager.getBeersList(page: Swift.Int, completion: (Swift.Optional&lt;Swift.Array&lt;FoodLand.BeersModelElement&gt;&gt;, Swift.Optional&lt;FoodLand.ResponseError&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "FoodLand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/Networking/Manager/NetworkManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
-                  offsetFromSymbolStart = "41">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

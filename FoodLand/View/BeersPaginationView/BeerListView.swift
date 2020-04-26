@@ -10,7 +10,6 @@ import SwiftUI
 
 struct BeerListView: View {
     @EnvironmentObject private var viewModel: BeersViewModel
-//    let locator = ServiceLocator()
     
     var body: some View {
         List(viewModel.items) { item in
@@ -31,6 +30,9 @@ struct BeerListView: View {
         .navigationBarTitle("Beers")
         .onAppear() {
             self.viewModel.loadPage()
+        }
+        .alert(isPresented: $viewModel.isNotConnected) {
+            Alert(title: Text("No connection"), message: Text("You are not connection to the internet."), dismissButton: .default(Text("OK")))
         }
     }
 }

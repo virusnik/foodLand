@@ -27,6 +27,7 @@
 		362FE32B2420BBBB00D9F1F8 /* NavPushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE32A2420BBBB00D9F1F8 /* NavPushButton.swift */; };
 		362FE32D2420BBDF00D9F1F8 /* NavPopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE32C2420BBDF00D9F1F8 /* NavPopButton.swift */; };
 		362FE32F2420C49000D9F1F8 /* BeerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE32E2420C49000D9F1F8 /* BeerDetailsView.swift */; };
+		3652183E2450B13E00627C2D /* FoodRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3652183D2450B13E00627C2D /* FoodRowViewModel.swift */; };
 		36666F8424476EC300EDF3F3 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36666F8324476EC300EDF3F3 /* ServiceLocator.swift */; };
 		36737A01244C50EF00FBFDDC /* Disk in Frameworks */ = {isa = PBXBuildFile; productRef = 36737A00244C50EF00FBFDDC /* Disk */; };
 		36737A04244C80A200FBFDDC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 36737A03244C80A200FBFDDC /* Realm */; };
@@ -34,6 +35,7 @@
 		36737A09244CB05000FBFDDC /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36737A08244CB05000FBFDDC /* RealmData.swift */; };
 		36737A0B244CB19900FBFDDC /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36737A0A244CB19900FBFDDC /* RealmExtension.swift */; };
 		36808BCF2430A53A00BBA82B /* BeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36808BCE2430A53A00BBA82B /* BeerService.swift */; };
+		369484662455BF6B008227C2 /* NetworkConnectionMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 369484652455BF6B008227C2 /* NetworkConnectionMonitor.swift */; };
 		36ABB041241668E80022D7C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36ABB040241668E80022D7C6 /* Constants.swift */; };
 		36AF7C64240D3A5500FFF9B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7C63240D3A5500FFF9B0 /* AppDelegate.swift */; };
 		36AF7C66240D3A5500FFF9B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7C65240D3A5500FFF9B0 /* SceneDelegate.swift */; };
@@ -99,10 +101,12 @@
 		362FE32A2420BBBB00D9F1F8 /* NavPushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavPushButton.swift; sourceTree = "<group>"; };
 		362FE32C2420BBDF00D9F1F8 /* NavPopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavPopButton.swift; sourceTree = "<group>"; };
 		362FE32E2420C49000D9F1F8 /* BeerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsView.swift; sourceTree = "<group>"; };
+		3652183D2450B13E00627C2D /* FoodRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRowViewModel.swift; sourceTree = "<group>"; };
 		36666F8324476EC300EDF3F3 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		36737A08244CB05000FBFDDC /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
 		36737A0A244CB19900FBFDDC /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
 		36808BCE2430A53A00BBA82B /* BeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerService.swift; sourceTree = "<group>"; };
+		369484652455BF6B008227C2 /* NetworkConnectionMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnectionMonitor.swift; sourceTree = "<group>"; };
 		36ABB040241668E80022D7C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		36AF7C60240D3A5500FFF9B0 /* FoodLand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodLand.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36AF7C63240D3A5500FFF9B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 				362FE31E24209D2B00D9F1F8 /* Manager */,
 				362FE31D24209CAB00D9F1F8 /* Service */,
 				362FE31F24209D4D00D9F1F8 /* Encoding */,
+				369484652455BF6B008227C2 /* NetworkConnectionMonitor.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -381,6 +386,7 @@
 				36AF7CA52411102D00FFF9B0 /* FoodListViewModel.swift */,
 				362FE2F4241E136500D9F1F8 /* BeersViewModel.swift */,
 				362FE3262420B81F00D9F1F8 /* NavControllerViewModel.swift */,
+				3652183D2450B13E00627C2D /* FoodRowViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -539,9 +545,11 @@
 				36E2D645241D3523003D54C0 /* PunkView.swift in Sources */,
 				36AF7CA62411102D00FFF9B0 /* FoodListViewModel.swift in Sources */,
 				362FE2F7241E182100D9F1F8 /* ExtensionsRandomAccsess.swift in Sources */,
+				3652183E2450B13E00627C2D /* FoodRowViewModel.swift in Sources */,
 				362FE31A2420962E00D9F1F8 /* BeersRow.swift in Sources */,
 				36AF7CA42411073800FFF9B0 /* FoodListModel.swift in Sources */,
 				36AF7CAA241170CB00FFF9B0 /* ActivityIndicator.swift in Sources */,
+				369484662455BF6B008227C2 /* NetworkConnectionMonitor.swift in Sources */,
 				362FE312241FB5D300D9F1F8 /* URLParameterEncoder.swift in Sources */,
 				362FE308241FB52800D9F1F8 /* EndPointType.swift in Sources */,
 				362FE3212420A45900D9F1F8 /* BeerRandomView.swift in Sources */,
