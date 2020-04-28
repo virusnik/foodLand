@@ -12,7 +12,7 @@
       },
       {
         "package": "ImagePackage",
-        "repositoryURL": "git@github.com:virusnik/ImagePackage.git",
+        "repositoryURL": "https://github.com/virusnik/ImagePackage",
         "state": {
           "branch": null,
           "revision": "885156fc91acfdfb3430b2c433aa92325877895e",

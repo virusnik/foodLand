@@ -33,10 +33,10 @@ final class BeersViewModel: ObservableObject {
                 
                 switch result {
                 case .success(let beers):
-                    self.items = beers
+                    self.items += beers
                 case .failure(let error as NSError):
                     print(error)
-                    if error.code == 1 {
+                    if error.code == 5 {
                         self.isNotConnected = true
                     }
                 }
@@ -73,7 +73,7 @@ final class BeersViewModel: ObservableObject {
                         debugPrint("Saved beers to disk")
                     case .failure(let error as NSError):
                         print(error)
-                        if error.code == 1 {
+                        if error.code == 5 {
                             self.isNotConnected = true
                         }
                     }

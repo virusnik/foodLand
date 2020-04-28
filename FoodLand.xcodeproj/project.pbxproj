@@ -55,7 +55,7 @@
 		36AF7CA42411073800FFF9B0 /* FoodListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7CA32411073800FFF9B0 /* FoodListModel.swift */; };
 		36AF7CA62411102D00FFF9B0 /* FoodListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7CA52411102D00FFF9B0 /* FoodListViewModel.swift */; };
 		36AF7CAA241170CB00FFF9B0 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7CA9241170CB00FFF9B0 /* ActivityIndicator.swift */; };
-		36C65CBA2440F23000502159 /* ImagePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 36C65CB92440F23000502159 /* ImagePackage */; };
+		36CE3ADB245857CF00EA7D89 /* ImagePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 36CE3ADA245857CF00EA7D89 /* ImagePackage */; };
 		36DE16422443856000275D4E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DE16412443856000275D4E /* HeaderView.swift */; };
 		36DE16442443870B00275D4E /* FoodRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DE16432443870B00275D4E /* FoodRowView.swift */; };
 		36E2D645241D3523003D54C0 /* PunkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E2D644241D3523003D54C0 /* PunkView.swift */; };
@@ -146,8 +146,8 @@
 			files = (
 				36737A06244C80A200FBFDDC /* RealmSwift in Frameworks */,
 				36737A04244C80A200FBFDDC /* Realm in Frameworks */,
-				36C65CBA2440F23000502159 /* ImagePackage in Frameworks */,
 				36737A01244C50EF00FBFDDC /* Disk in Frameworks */,
+				36CE3ADB245857CF00EA7D89 /* ImagePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,10 +415,10 @@
 			);
 			name = FoodLand;
 			packageProductDependencies = (
-				36C65CB92440F23000502159 /* ImagePackage */,
 				36737A00244C50EF00FBFDDC /* Disk */,
 				36737A03244C80A200FBFDDC /* Realm */,
 				36737A05244C80A200FBFDDC /* RealmSwift */,
+				36CE3ADA245857CF00EA7D89 /* ImagePackage */,
 			);
 			productName = FoodLand;
 			productReference = 36AF7C60240D3A5500FFF9B0 /* FoodLand.app */;
@@ -493,9 +493,9 @@
 			);
 			mainGroup = 36AF7C57240D3A5500FFF9B0;
 			packageReferences = (
-				36C65CB82440F23000502159 /* XCRemoteSwiftPackageReference "ImagePackage" */,
 				367379FF244C50EF00FBFDDC /* XCRemoteSwiftPackageReference "Disk" */,
 				36737A02244C80A200FBFDDC /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				36CE3AD9245857CF00EA7D89 /* XCRemoteSwiftPackageReference "ImagePackage" */,
 			);
 			productRefGroup = 36AF7C61240D3A5500FFF9B0 /* Products */;
 			projectDirPath = "";
@@ -927,9 +927,9 @@
 				minimumVersion = 4.4.1;
 			};
 		};
-		36C65CB82440F23000502159 /* XCRemoteSwiftPackageReference "ImagePackage" */ = {
+		36CE3AD9245857CF00EA7D89 /* XCRemoteSwiftPackageReference "ImagePackage" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:virusnik/ImagePackage.git";
+			repositoryURL = "https://github.com/virusnik/ImagePackage";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
@@ -953,9 +953,9 @@
 			package = 36737A02244C80A200FBFDDC /* XCRemoteSwiftPackageReference "realm-cocoa" */;
 			productName = RealmSwift;
 		};
-		36C65CB92440F23000502159 /* ImagePackage */ = {
+		36CE3ADA245857CF00EA7D89 /* ImagePackage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 36C65CB82440F23000502159 /* XCRemoteSwiftPackageReference "ImagePackage" */;
+			package = 36CE3AD9245857CF00EA7D89 /* XCRemoteSwiftPackageReference "ImagePackage" */;
 			productName = ImagePackage;
 		};
 /* End XCSwiftPackageProductDependency section */

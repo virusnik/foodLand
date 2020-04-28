@@ -19,9 +19,8 @@ class BeerService: BeerServiceProtocol {
     func loadRandombeer(completion: @escaping (Result<[BeersModelElement], Error>) -> Void) {
         networkManager.getBeerRandom { (beersModel, error) in
             guard let beers = beersModel else {
-                let errMessage = error ?? Constants.noConnection as! Error
-                let error = NSError(domain: "BeerRandomService", code: 1, userInfo: [NSLocalizedDescriptionKey: errMessage])
-                completion(.failure(error))
+                let errorMessage = error ?? NSError(domain: "BeerRandomService", code: 1, userInfo: [NSLocalizedDescriptionKey: Constants.noConnection]) as! ResponseError
+                completion(.failure(errorMessage))
                 return
             }
             completion(.success(beers))
@@ -31,9 +30,8 @@ class BeerService: BeerServiceProtocol {
     func fetchBeerList(page: Int, completion: @escaping (Result<[BeersModelElement], Error>) -> Void) {
         networkManager.getBeersList(page: page) { (beersModel, error) in
             guard let beers = beersModel else {
-                let errMessage = error ?? "Can't load beers list" as! Error
-                let error = NSError(domain: "BeerService", code: 1, userInfo: [NSLocalizedDescriptionKey: errMessage])
-                completion(.failure(error))
+                let errorMeesage = error ?? NSError(domain: "BeerService", code: 1, userInfo: [NSLocalizedDescriptionKey: Constants.noConnection]) as! ResponseError
+                completion(.failure(errorMeesage))
                 RealmData.shared.getRealmData { (beers: [BeersModelElement]) in completion(.success(beers)) }
                 return
             }
