@@ -354,86 +354,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8617B8A1-8A1B-4D08-8BF2-0E3F705ECAF2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodLand/Application/Service/BeerService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "loadRandombeer(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2060625B-E896-4E70-BF6E-85D1801DB713"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodLand/Application/Service/BeerService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "loadRandombeer(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FBDB2441-25B1-4A22-95FF-ED15918460EB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodLand/Application/Service/BeerService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "loadRandombeer(completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "FBDB2441-25B1-4A22-95FF-ED15918460EB - 605b02314eb5ac4b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "FoodLand.BeerService.loadRandombeer(completion: (Swift.Result&lt;Swift.Array&lt;FoodLand.BeersModelElement&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "FoodLand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/Application/Service/BeerService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "37">
-               </Location>
-               <Location
-                  uuid = "FBDB2441-25B1-4A22-95FF-ED15918460EB - 21a0b6fb1546fbba"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;FoodLand.BeersModelElement&gt;&gt;, Swift.Optional&lt;FoodLand.ResponseError&gt;) -&gt; () in FoodLand.BeerService.loadRandombeer(completion: (Swift.Result&lt;Swift.Array&lt;FoodLand.BeersModelElement&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "FoodLand"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/seryoga/Documents/otusApplication/FoodLand/FoodLand/Application/Service/BeerService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "149">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "49D3F129-D6F3-4786-9003-856A87C56B06"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -576,38 +496,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2FEAD0E4-93A6-416F-8A98-D0CFB416C3ED"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodLand/Application/Service/BeerService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "BeerServiceProtocol"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6D8A4FD0-631E-444F-A9FB-870600FBF699"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodLand/Application/Service/BeerService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "loadRandombeer(completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F0C1A2FC-6D2A-4A5A-88E3-F4ABA2DE2254"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -657,7 +545,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7DA0331F-D23A-4F03-9DF6-D634AD47143F"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FoodLand/ViewModel/BeersViewModel.swift"
@@ -666,22 +554,6 @@
             startingLineNumber = "38"
             endingLineNumber = "38"
             landmarkName = "loadPage()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7B55C5CD-6FEF-4730-8FB5-AD2597BAF4E9"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FoodLand/Application/Service/BeerService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "loadRandombeer(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
