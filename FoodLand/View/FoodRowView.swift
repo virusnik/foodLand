@@ -11,7 +11,9 @@ import SwiftUI
 struct FoodRowView: View {
     
     var foodItem: FoodListModel
-    @State private var count: Int = 0
+    @State private var quantity: Int = 1
+    @State private var totalPrice: Double?
+    @State var isQuantity = false
 //    var station: FoodRowViewModel
     @EnvironmentObject var viewModel: FoodRowViewModel
     
@@ -20,7 +22,7 @@ struct FoodRowView: View {
             HStack {
                 Text(foodItem.foodName)
                     .font(.headline)
-                
+                Spacer()
                 Button(action: {
                     print("Delete tapped!")
                     self.viewModel.addToOrder(localFood: self.foodItem)
@@ -30,14 +32,14 @@ struct FoodRowView: View {
                     Text("add")
                     .fontWeight(.bold)
                         .font(.body)
-                    .background(Color.purple)
+//                    .background(Color.black)
                     .cornerRadius(5)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .padding(10)
-                        .frame(width: 90, height: 20, alignment: .center)
+                        .frame(width: 70, height: 20, alignment: .center)
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.purple, lineWidth: 2)
+                            .stroke(Color.black, lineWidth: 1)
                     )
                 }
                 .padding(.trailing, 10)
@@ -52,12 +54,38 @@ struct FoodRowView: View {
                 .foregroundColor(.gray)
             
             Text(String(foodItem.price))
+//            ("Number", value: $totalPrice, formatter: DoubleFormatter())
+//            Text(isQuantity ? "\(totalPrice)" : "\(foodItem.price)")
                 .font(.footnote)
             
-            Stepper(value: $count, in: 0...100,label:  {
-                Text("Number of: \(count)")
+            Stepper(onIncrement: {
+//                viewModel.updateTotalPrice()
+                self.quantity += 1
+                self.totalPrice = self.foodItem.price * Double(self.quantity)
+            }, onDecrement: {
+                self.quantity -= 1
+            }, label: {
+                Text("Number of: \(quantity)")
             })
+//            Stepper(value: $quantity, in: 1...100,label:  {
+//                Text("Number of: \(quantity)")
+////                self.up
+////                self.totalPrice =  foodItem.price * Double(quantity)
+////                viewModel.updateTotalPrice()
+//            })
             
+            
+            
+        }.onAppear() {
+            func updateTotalPrice()  {
+                    
+                if let foodItem = self.viewModel.foodItem {
+                    self.totalPrice =  foodItem.price * Double(self.quantity)
+            //            totalPrice = foodItem.price * Double(quantity)
+            //            configureView(for: product, with: totalPrice)
+                    }
+                }
+//            self.viewModel.updateTotalPrice()
         }
     }
 }

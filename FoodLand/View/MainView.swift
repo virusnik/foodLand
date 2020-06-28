@@ -17,9 +17,10 @@ struct MainView: View {
     
     var body: some View {
         TabView(selection: self.$selected) {
-            ChooseTableView(numberTable: "",
-                            selected: $selected,
-                            selectedItem: $selectedItem)
+            ScannerView()
+//            ChooseTableView(numberTable: "",
+//                            selected: $selected,
+//                            selectedItem: $selectedItem)
                 .tag(0)
                 .tabItem {
                     VStack {

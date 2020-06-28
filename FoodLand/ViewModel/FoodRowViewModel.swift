@@ -15,6 +15,9 @@ final class FoodRowViewModel: ObservableObject {
     
     @Published var localFoodOrder = [FoodListModel]()
     private var documentDir: NSString!
+//    public var quantity: Int = 1
+    
+    var totalPrice: Double = 0.0
     
     init() {}
     
@@ -54,5 +57,13 @@ final class FoodRowViewModel: ObservableObject {
             debugPrint("Saved beers to disk")
         }
         
+    }
+    
+    func updateTotalPrice() {
+        
+        if let foodItem = self.foodItem {
+//            totalPrice = foodItem.price * Double(quantity)
+//            configureView(for: product, with: totalPrice)
+        }
     }
 }

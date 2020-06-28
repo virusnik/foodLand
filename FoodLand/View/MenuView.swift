@@ -12,6 +12,10 @@ struct MenuView: View {
     
     @EnvironmentObject var viewModel: CategoryListViewModel
     @Binding var selectedItem: Int?
+    var badgePosition: CGFloat = 2
+    var navItemRightButton: CGFloat = 1
+    @State var isPresented: Bool = false
+    var countOfItemsOrdered: Int?
     
     func sectionIndex(section : CategoryListModel) -> Int {
         viewModel.category.firstIndex(where: {$0.categoryName == section.categoryName})!
@@ -39,9 +43,26 @@ struct MenuView: View {
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Menu")
-            .navigationBarItems(trailing: Button(action: {}) {
-                Image(systemName: "cart")
+            .navigationBarItems(trailing: Button(action: { self.isPresented.toggle() }) {
+                GeometryReader { geometry in
+                    Image(systemName: "cart")
+                                    ZStack {
+                                      Circle()
+                                        .foregroundColor(.red)
+
+                                        Text("\(10)") //
+                                        .foregroundColor(.white)
+                                        .font(Font.system(size: 12))
+                                    }
+                                    .frame(width: 15, height: 15)
+                                    .offset(x: ( ( 2 * self.badgePosition) - 0.95 ) * ( geometry.size.width / ( 2 * self.navItemRightButton ) ) - 5, y: -12)
+                                    .opacity(10 == 0 ? 0 : 1.0)
+                }
+                
             }).foregroundColor(.black)
+            .sheet(isPresented: $isPresented) {
+                ShoppingCart()
+            }
         }
         
     }

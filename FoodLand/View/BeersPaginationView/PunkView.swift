@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PunkView: View {
    @State private var selectorIndex = 0
-    var title = ["Beer", "RandomBeer"]
+    var title = ["Beer", LocalizedStringKey("RandomBeer")]
 
     var body: some View {
         VStack {

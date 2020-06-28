@@ -18,6 +18,9 @@ struct BeerRandomView: View {
             Spacer()
             Text("\(self.viewModel.name ?? "ochakovo")")
             Spacer()
+            if viewModel.isNotConnected {
+                MessageView(title: "No connection", message: "You are not connection to the internet", style: .error)
+            }
         }
         .onAppear() {
             self.viewModel.loadBeerRandom()
@@ -27,9 +30,9 @@ struct BeerRandomView: View {
             }
         }
         .navigationBarTitle(Text("Random Beer"))
-        .alert(isPresented: $viewModel.isNotConnected) {
-            Alert(title: Text("No connection"), message: Text("You are not connection to the internet."), dismissButton: .default(Text("OK")))
-        }
+//        .alert(isPresented: $viewModel.isNotConnected) {
+//            Alert(title: Text("No connection"), message: Text("You are not connection to the internet."), dismissButton: .default(Text("OK")))
+//        }
         
     }
 }
