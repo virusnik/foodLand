@@ -47,4 +47,12 @@ struct Constants {
         case json = "application/json"
     }
     
+    static let timeFormat = "HH:mm"
+    
+    struct KeysApp {
+        static let scheduleForDarkMode = "k_schedule_for_dark_mode"
+        static let fromTime = "k_fromTime"
+        static let toTime = "k_toTime"
+    }
+    
 }

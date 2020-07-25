@@ -40,6 +40,8 @@ struct MenuView: View {
                         }
                     }
                 }
+            }.onAppear {
+                self.viewModel.loadfromServer()
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Menu")

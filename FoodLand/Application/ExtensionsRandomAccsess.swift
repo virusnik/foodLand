@@ -12,6 +12,13 @@ extension String: Identifiable {
     public var id: String {
         self
     }
+    
+    func convertToSecondsInt() -> Int {
+        let components: Array = self.components(separatedBy: ":")
+        let hours = Int(components[0]) ?? 0
+        let minutes = Int(components[1]) ?? 0
+        return (hours * 3600) + (minutes * 60)
+    }
 }
 
 extension RandomAccessCollection where Self.Element: Identifiable {
