@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             .environmentObject(CategoryListViewModel())
             .environmentObject(FoodListViewModel())
             .environmentObject(BeersViewModel())
-            .environmentObject(FoodRowViewModel())
+//            .environmentObject(FoodRowViewModel())
             .environmentObject(ScannerViewModel())
 
         // Use a UIHostingController as window root view controller.

@@ -14,6 +14,8 @@ struct FoodListModel: Identifiable, Codable {
     var foodName: String
     var foodDescription: String
     var price: Double
+    var quantity: Int
+    var waitingTime: Int
 }
 
 //extension FoodListModel: Identifiable {

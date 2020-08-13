@@ -10,6 +10,9 @@ import SwiftUI
 
 struct ScannerView: View {
     @ObservedObject var viewModel = ScannerViewModel()
+    @Binding var selected: Int
+    @Binding var selectedItem: Int?
+    @State private var showDetails = false
     
     var body: some View {
         ZStack {
@@ -23,10 +26,20 @@ struct ScannerView: View {
                 VStack {
                     Text("Keep scanning for QR-codes")
                         .font(.subheadline)
+                    if !self.viewModel.lastQrCode.isEmpty {
+                        NavigationLink(destination: MainView(selected: selected)) {
+                            Button("To menu", action: {
+//                                self.showDetails.toggle()
+                                self.selected = 1
+                                self.selectedItem = Int(self.viewModel.lastQrCode)
+                            })
+                        }
+                    }
                     Text(self.viewModel.lastQrCode)
                         .bold()
                         .lineLimit(5)
                         .padding()
+                        .background(Color.white)
                 }
                 .padding(.vertical, 20)
                 
@@ -50,7 +63,9 @@ struct ScannerView: View {
 }
 
 struct ScannerView_Previews: PreviewProvider {
+    @State static var selected = 1
+    @State static var selectedItem:Int? = 1
     static var previews: some View {
-        ScannerView()
+        ScannerView(selected: $selected, selectedItem: $selectedItem)
     }
 }

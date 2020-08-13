@@ -22,13 +22,13 @@ struct ChooseTableView: View {
                 TextField("Enter number table", text: $numberTable)
                     .keyboardType(.numberPad)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-//                NavigationLink(destination: MainView(selected: selected)) {
+                NavigationLink(destination: MainView(selected: selected)) {
                     Button("To menu") {
                         
-//                        self.selected = 1
-//                        self.selectedItem = Int(self.numberTable)
+                        self.selected = 1
+                        self.selectedItem = Int(self.numberTable)
                     }
-//                } //NavigationLink
+                } //NavigationLink
             }
             .navigationBarTitle("Welcome")
             // VStack

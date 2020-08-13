@@ -15,7 +15,7 @@ class QrCodeCameraDelegate: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     var lastTime = Date(timeIntervalSince1970: 0)
     
     var onResult: (String) -> Void = { _  in }
-    var mockData: String?
+    var mockData: String = "1"
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         if let metadataObject = metadataObjects.first {
@@ -26,7 +26,7 @@ class QrCodeCameraDelegate: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     }
     
     @objc func onSimulateScanning(){
-        foundBarcode(mockData ?? "Simulated QR-code result.")
+        foundBarcode(mockData)
     }
     
     func foundBarcode(_ stringValue: String) {

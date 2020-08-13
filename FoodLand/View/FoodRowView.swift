@@ -10,12 +10,11 @@ import SwiftUI
 
 struct FoodRowView: View {
     
-    var foodItem: FoodListModel
+    @State var foodItem: FoodListModel
     @State private var quantity: Int = 1
     @State private var totalPrice: Double?
     @State var isQuantity = false
-//    var station: FoodRowViewModel
-    @EnvironmentObject var viewModel: FoodRowViewModel
+    @EnvironmentObject var viewModelCategory: CategoryListViewModel
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -24,29 +23,24 @@ struct FoodRowView: View {
                     .font(.headline)
                 Spacer()
                 Button(action: {
-                    print("Delete tapped!")
-                    self.viewModel.addToOrder(localFood: self.foodItem)
-//                    FoodRowView.environmentObject(viewModel)
-//                    self.station.addToOrder(localFood: self.foodItem)
-                    }) {
+                    self.foodItem.quantity = self.quantity
+                    self.viewModelCategory.addToOrder(localFood: self.foodItem)
+                }) {
                     Text("add")
-                    .fontWeight(.bold)
+                        .fontWeight(.bold)
                         .font(.body)
-//                    .background(Color.black)
-                    .cornerRadius(5)
-                    .foregroundColor(.black)
-                    .padding(10)
+                        .cornerRadius(5)
+                        .foregroundColor(.black)
+                        .padding(10)
                         .frame(width: 70, height: 20, alignment: .center)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.black, lineWidth: 1)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.black, lineWidth: 1)
                     )
-                }
+                } // Button
                 .padding(.trailing, 10)
                 .frame( alignment: .trailing)
             }
-            
-            
             Text(foodItem.foodDescription)
                 .fixedSize(horizontal: false, vertical: true)
                 .lineLimit(2)
@@ -54,38 +48,17 @@ struct FoodRowView: View {
                 .foregroundColor(.gray)
             
             Text(String(foodItem.price))
-//            ("Number", value: $totalPrice, formatter: DoubleFormatter())
-//            Text(isQuantity ? "\(totalPrice)" : "\(foodItem.price)")
                 .font(.footnote)
-            
             Stepper(onIncrement: {
-//                viewModel.updateTotalPrice()
                 self.quantity += 1
-                self.totalPrice = self.foodItem.price * Double(self.quantity)
             }, onDecrement: {
-                self.quantity -= 1
+                if self.quantity != 1 {
+                    self.quantity -= 1
+                }
             }, label: {
                 Text("Number of: \(quantity)")
             })
-//            Stepper(value: $quantity, in: 1...100,label:  {
-//                Text("Number of: \(quantity)")
-////                self.up
-////                self.totalPrice =  foodItem.price * Double(quantity)
-////                viewModel.updateTotalPrice()
-//            })
-            
-            
-            
         }.onAppear() {
-            func updateTotalPrice()  {
-                    
-                if let foodItem = self.viewModel.foodItem {
-                    self.totalPrice =  foodItem.price * Double(self.quantity)
-            //            totalPrice = foodItem.price * Double(quantity)
-            //            configureView(for: product, with: totalPrice)
-                    }
-                }
-//            self.viewModel.updateTotalPrice()
         }
     }
 }
