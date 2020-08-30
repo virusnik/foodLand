@@ -32,6 +32,8 @@
 		362FE32B2420BBBB00D9F1F8 /* NavPushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE32A2420BBBB00D9F1F8 /* NavPushButton.swift */; };
 		362FE32D2420BBDF00D9F1F8 /* NavPopButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE32C2420BBDF00D9F1F8 /* NavPopButton.swift */; };
 		362FE32F2420C49000D9F1F8 /* BeerDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362FE32E2420C49000D9F1F8 /* BeerDetailsView.swift */; };
+		365706EC24FC03AC00C76A1B /* OrderDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365706EB24FC03AC00C76A1B /* OrderDetailsView.swift */; };
+		365706EE24FC08DD00C76A1B /* ProductFromDetailsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365706ED24FC08DD00C76A1B /* ProductFromDetailsRow.swift */; };
 		36666F8424476EC300EDF3F3 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36666F8324476EC300EDF3F3 /* ServiceLocator.swift */; };
 		366D724524C9D14900BB39A8 /* MockFoodList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366D724424C9D14900BB39A8 /* MockFoodList.swift */; };
 		366D724624C9D24B00BB39A8 /* FoodListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AF7CA32411073800FFF9B0 /* FoodListModel.swift */; };
@@ -46,6 +48,8 @@
 		36737A06244C80A200FBFDDC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 36737A05244C80A200FBFDDC /* RealmSwift */; };
 		36737A09244CB05000FBFDDC /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36737A08244CB05000FBFDDC /* RealmData.swift */; };
 		36737A0B244CB19900FBFDDC /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36737A0A244CB19900FBFDDC /* RealmExtension.swift */; };
+		36781B6024F67F8D00276182 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36781B5F24F67F8D00276182 /* HistoryView.swift */; };
+		36781B6224F68CB100276182 /* HistoryRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36781B6124F68CB100276182 /* HistoryRowView.swift */; };
 		36808BCF2430A53A00BBA82B /* BeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36808BCE2430A53A00BBA82B /* BeerService.swift */; };
 		3687D2EF24D860EB00D41BEA /* ProductCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3687D2EE24D860EB00D41BEA /* ProductCardView.swift */; };
 		3689A2F524DFE69B0059198D /* OrderInfoAdditionally.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689A2F424DFE69B0059198D /* OrderInfoAdditionally.swift */; };
@@ -129,12 +133,16 @@
 		362FE32A2420BBBB00D9F1F8 /* NavPushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavPushButton.swift; sourceTree = "<group>"; };
 		362FE32C2420BBDF00D9F1F8 /* NavPopButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavPopButton.swift; sourceTree = "<group>"; };
 		362FE32E2420C49000D9F1F8 /* BeerDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsView.swift; sourceTree = "<group>"; };
+		365706EB24FC03AC00C76A1B /* OrderDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsView.swift; sourceTree = "<group>"; };
+		365706ED24FC08DD00C76A1B /* ProductFromDetailsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFromDetailsRow.swift; sourceTree = "<group>"; };
 		36666F8324476EC300EDF3F3 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		366D724424C9D14900BB39A8 /* MockFoodList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFoodList.swift; sourceTree = "<group>"; };
 		366D724924C9DC8B00BB39A8 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		366D724C24CC5BEE00BB39A8 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		36737A08244CB05000FBFDDC /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
 		36737A0A244CB19900FBFDDC /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
+		36781B5F24F67F8D00276182 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		36781B6124F68CB100276182 /* HistoryRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRowView.swift; sourceTree = "<group>"; };
 		36808BCE2430A53A00BBA82B /* BeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerService.swift; sourceTree = "<group>"; };
 		3687D2EE24D860EB00D41BEA /* ProductCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCardView.swift; sourceTree = "<group>"; };
 		3689A2F424DFE69B0059198D /* OrderInfoAdditionally.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderInfoAdditionally.swift; sourceTree = "<group>"; };
@@ -350,6 +358,13 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		369FF45824FC1A7B0053BABD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		36ABB03F24164FA10022D7C6 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +383,10 @@
 				36CEF167245F2DED0045951C /* MessageView.swift */,
 				3687D2EE24D860EB00D41BEA /* ProductCardView.swift */,
 				3689A2F424DFE69B0059198D /* OrderInfoAdditionally.swift */,
+				36781B5F24F67F8D00276182 /* HistoryView.swift */,
+				36781B6124F68CB100276182 /* HistoryRowView.swift */,
+				365706EB24FC03AC00C76A1B /* OrderDetailsView.swift */,
+				365706ED24FC08DD00C76A1B /* ProductFromDetailsRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -417,6 +436,7 @@
 		36AF7C62240D3A5500FFF9B0 /* FoodLand */ = {
 			isa = PBXGroup;
 			children = (
+				369FF45824FC1A7B0053BABD /* Main */,
 				36E352AA24A8BB39000B056A /* Services */,
 				361D8117249243C80064C21C /* QrScanner */,
 				36E98967246DA12C00FF4008 /* Localizable.strings */,
@@ -693,12 +713,16 @@
 				362FE3252420B7C000D9F1F8 /* NavControllerView.swift in Sources */,
 				36737A09244CB05000FBFDDC /* RealmData.swift in Sources */,
 				36DE16422443856000275D4E /* HeaderView.swift in Sources */,
+				36781B6024F67F8D00276182 /* HistoryView.swift in Sources */,
 				362FE3292420B89300D9F1F8 /* Screen.swift in Sources */,
+				365706EE24FC08DD00C76A1B /* ProductFromDetailsRow.swift in Sources */,
 				362FE2F5241E136500D9F1F8 /* BeersViewModel.swift in Sources */,
+				365706EC24FC03AC00C76A1B /* OrderDetailsView.swift in Sources */,
 				361D811F249245E90064C21C /* ScannerView.swift in Sources */,
 				36AF7C66240D3A5500FFF9B0 /* SceneDelegate.swift in Sources */,
 				36AF7C98240D41E800FFF9B0 /* CategoryListViewModel.swift in Sources */,
 				7F5896FD241932560019F22C /* TwoColumnView.swift in Sources */,
+				36781B6224F68CB100276182 /* HistoryRowView.swift in Sources */,
 				36808BCF2430A53A00BBA82B /* BeerService.swift in Sources */,
 				36737A0B244CB19900FBFDDC /* RealmExtension.swift in Sources */,
 				36E352B024A8C2DB000B056A /* SharedPreferences.swift in Sources */,

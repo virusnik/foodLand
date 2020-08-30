@@ -9,18 +9,21 @@
 import SwiftUI
 
 struct ShoppingCart: View {
-    init() {
-        UITableViewHeaderFooterView.appearance().tintColor = UIColor.clear
-    }
+    @Binding var selected: Int
+//    init() {
+//        UITableViewHeaderFooterView.appearance().tintColor = UIColor.clear
+//    }
     @EnvironmentObject var viewModel: CategoryListViewModel
     @State private var showDetails = false
+    @State private var showingAlert = false
+    
     
     var body: some View {
         listView
     }
     
     var listView: AnyView {
-        if viewModel.localFoodOrder.isEmpty {
+        if viewModel.orderInfoModel.foodListModel.isEmpty || viewModel.orderInfoModel.status == .closed || viewModel.orderInfoModel.foodListModel.last?.dishStatus == .cooking {
             return AnyView(emptyListView)
         } else {
             return AnyView(cartListView)
@@ -36,44 +39,74 @@ struct ShoppingCart: View {
             VStack{
                 List {
                     Section {
-                        ForEach(viewModel.localFoodOrder) { item in
-                            ProductCard(item: item)
-                        }
+                        ForEach(viewModel.orderInfoModel.foodListModel) { item in
+                            if item.dishStatus == .new {
+                                ProductCard(item: item)
+                            }
+                        }.onDelete(perform: self.delete)
                     }
                     Section {
-                        OrderInfoAdditionally(item: viewModel.orderInfo ?? OrderInfoAdditionallyModel(totalProductCost: viewModel.getTotalProductCost(), costOfService: viewModel.getCostOfService(), totalValue: viewModel.getTotalValue()))
-                    }
-                    if showDetails {
-                         MessageView(title: "Your order successfully send to cook", message: "And you can just enjoy", style: .success)
+                        OrderInfoAdditionally(item: viewModel.orderInfoModel)
                     }
                 }
                 .listStyle(GroupedListStyle())
-                Button(action: {
-                    self.showDetails.toggle()
-                    
-                }) { Text("BUY")
-                    .fontWeight(.bold)
-                    .font(.body)
-                    .cornerRadius(5)
-                    .foregroundColor(.black)
-                    .frame(width: UIScreen.main.bounds.width - 50, height: 40, alignment: .center)
-                    .overlay(RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.black, lineWidth: 1)
-                    )
-                }
+                NavigationLink(destination: MainView(selected: selected)) {
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            self.showingAlert = true
+                        }) {
+                            HStack {
+                                Image(systemName: "paperplane")
+                                Text("Confirm order")
+                            }
+                        }.buttonStyle(GradientButtonStyle())
+                        Spacer()
+                    }
+                } //NavigationLink
                 
                 Divider()
             }.onAppear(perform: {
                 UITableView.appearance().separatorStyle = .none
+                self.viewModel.getHistoryOrder()
             })
                 .listStyle(GroupedListStyle())
                 .navigationBarTitle("Cart")
+            .alert(isPresented:$showingAlert) {
+                Alert(title: Text("Are you sure you want to send to cook this?"), message: Text("There is no undo"), primaryButton: .default(Text("Yes")) {
+                    // change status for order
+                    self.viewModel.orderInfoModel.status = .open
+                    // change status for every dishes
+                    for index in self.viewModel.orderInfoModel.foodListModel.indices {
+                        self.viewModel.orderInfoModel.foodListModel[index].dishStatus = .cooking
+                    }
+                    // nullify count dishes
+                    self.viewModel.countOfItemsOrdered = 0
+                    // navigate to HistoryView
+                    self.selected = 3
+                }, secondaryButton: .cancel())
+            } // Alert message
         }
+    }
+    func delete(at offsets: IndexSet) {
+        viewModel.deleteFromCart(index: offsets)
     }
 }
 
-struct ShoppingCart_Previews: PreviewProvider {
-    static var previews: some View {
-        ShoppingCart()
+struct GradientButtonStyle: ButtonStyle {
+    func makeBody(configuration: Self.Configuration) -> some View {
+        configuration.label
+            .font(.body)
+            .foregroundColor(Color.white)
+            .frame(width: UIScreen.main.bounds.width - 50, height: 40, alignment: .center)
+            .padding()
+            .background(LinearGradient(gradient: Gradient(colors: [Color.black, Color.gray]), startPoint: .bottom, endPoint: .top))
+            .cornerRadius(15.0)
     }
 }
+
+//struct ShoppingCart_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ShoppingCart()
+//    }
+//}

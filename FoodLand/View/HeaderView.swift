@@ -19,7 +19,7 @@ struct HeaderView: View {
                 .font(.title)
                 .foregroundColor(Color.white)
             Spacer()
-        }
-        .background(Color.black)
+        }.background(LinearGradient(gradient: Gradient(colors: [Color.black, Color.gray]), startPoint: .bottom, endPoint: .top))
+        .cornerRadius(5.0)
     }
 }

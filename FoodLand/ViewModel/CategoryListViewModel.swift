@@ -12,12 +12,13 @@ import Disk
 final class CategoryListViewModel: ObservableObject {
     
     @Published var category = [CategoryListModel]()
-    @Published var localFoodOrder = [FoodListModel]()
+//    @Published var localFoodOrder = [FoodListModel]()
     var countOfItemsOrdered: Int = 0
     @Published private(set) var isLoading = false
     
-    @Published var foodItem: FoodListModel?
-    @Published var orderInfo: OrderInfoAdditionallyModel?
+//    @Published var foodItem: FoodListModel?
+    @Published var orderInfoModel = OrderInfoAdditionallyModel()
+    @Published var localOrdersModel = [OrderInfoAdditionallyModel]()
     
     private var documentDir: NSString!
     
@@ -29,7 +30,7 @@ final class CategoryListViewModel: ObservableObject {
     
     func loadfromServer() {
         isLoading = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.service.fetchMenu { (categoryList) in
                 self.isLoading = false
                 guard let category = categoryList else {
@@ -49,9 +50,9 @@ final class CategoryListViewModel: ObservableObject {
     func checkForProduct(_ searchItem: FoodListModel) -> Int {
         var targetIndex = -1
         
-        if localFoodOrder.count > 0 {
-            for index in 0...localFoodOrder.count - 1 {
-                if localFoodOrder[index].id == searchItem.id {
+        if orderInfoModel.foodListModel.count > 0 {
+            for index in 0...orderInfoModel.foodListModel.count - 1 {
+                if orderInfoModel.foodListModel[index].id == searchItem.id && orderInfoModel.foodListModel[index].quantity == searchItem.quantity {
                     targetIndex = index
                 }
             }
@@ -65,9 +66,9 @@ final class CategoryListViewModel: ObservableObject {
             if checkForProduct(localFood) == -1 {
                 do {
                     self.countOfItemsOrdered += localFood.quantity
-                    localFoodOrder.append(localFood)
-                    print(localFoodOrder)
-                    try Disk.save(localFoodOrder, to: .documents, as: "foodToOrder.json")
+                    orderInfoModel.foodListModel.append(localFood)
+                    
+                    try Disk.save(orderInfoModel.foodListModel, to: .documents, as: "foodToOrder.json")
                     
                     let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
                     self.documentDir = dirPaths[0] as NSString
@@ -79,8 +80,9 @@ final class CategoryListViewModel: ObservableObject {
                         Description: \(error.localizedDescription)
                         """)
                 }
-                debugPrint("Saved beers to disk")
-            }
+                getHistoryOrder()
+                debugPrint("Saved orders to disk")
+            } 
             
         }
     
@@ -95,20 +97,30 @@ final class CategoryListViewModel: ObservableObject {
             
             for item in retrievedItems {
                 self.countOfItemsOrdered += item.quantity
-                localFoodOrder.append(item)
+                orderInfoModel.foodListModel.append(item)
             }
+            
             debugPrint("Retrieved food from disk")
+        }
+    }
+    
+    func deleteFromCart(index: IndexSet) {
+        orderInfoModel.foodListModel.remove(atOffsets: index)
+        getHistoryOrder()
+        self.countOfItemsOrdered = 0
+        for item in orderInfoModel.foodListModel {
+            self.countOfItemsOrdered += item.quantity
         }
     }
     
     // Calculate only products cost
     func getTotalProductCost() -> Double {
-        return localFoodOrder.reduce(0) { $0 + ($1.price * Double($1.quantity)) }
+        return orderInfoModel.foodListModel.reduce(0) { $0 + ($1.price * Double($1.quantity)) }
     }
     
     // Calculate only cost of service
     func getCostOfService() -> Double {
-        return localFoodOrder.reduce(0) { $0 + ($1.price * Double($1.quantity)) } / 100 * 10
+        return orderInfoModel.foodListModel.reduce(0) { $0 + ($1.price * Double($1.quantity)) } / 100 * 10
     }
     
     // Calculate total value for order
@@ -116,4 +128,14 @@ final class CategoryListViewModel: ObservableObject {
         return getTotalProductCost() + getCostOfService()
     }
     
+    func getHistoryOrder() {
+        orderInfoModel.totalProductCost = getTotalProductCost()
+        orderInfoModel.costOfService = getCostOfService()
+        orderInfoModel.totalValue = getTotalValue()
+        orderInfoModel.quantity = countOfItemsOrdered
+    }
+    
+    func getOrderHistory() {
+        localOrdersModel.append(orderInfoModel)
+    }
 }

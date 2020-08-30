@@ -22,7 +22,6 @@ final class FoodListViewModel: ObservableObject {
         let columned = (1...20).publisher.collect(2)
         _ = columned.collect().sink {
             self.items = $0
-            print($0)
         }
     }
 }

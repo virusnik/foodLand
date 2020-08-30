@@ -18,7 +18,8 @@ struct Constants {
         static let menu = "app"
         static let cart = "cart"
 //        static let about = "circle"
-        static let beers = "hexagon"
+//        static let beers = "hexagon"
+        static let history = "circle"
     }
     
     struct TabBarTitle {
@@ -26,7 +27,8 @@ struct Constants {
         static let menu = "Menu"
         static let cart = "Cart"
 //        static let about = "About"
-        static let beers = "Beers"
+//        static let beers = "Beers"
+        static let history = "History"
     }
     
     struct ProductionServer {

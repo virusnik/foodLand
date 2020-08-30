@@ -22,10 +22,10 @@ struct MainView: View {
         GeometryReader { geometry in
             ZStack(alignment: .bottomLeading) {
                 TabView(selection: self.$selected) {
-                    ScannerView(selected: self.$selected, selectedItem: self.$selectedItem)
-//                                    ChooseTableView(numberTable: "",
-//                                                    selected: self.$selected,
-//                                                    selectedItem: self.$selectedItem)
+//                    ScannerView(selected: self.$selected, selectedItem: self.$selectedItem)
+                                    ChooseTableView(numberTable: "",
+                                                    selected: self.$selected,
+                                                    selectedItem: self.$selectedItem)
                         .tag(0)
                         .tabItem {
                             VStack {
@@ -43,7 +43,7 @@ struct MainView: View {
                             }
                     }
                     
-                    ShoppingCart()
+                    ShoppingCart(selected: self.$selected)
                         .tag(2)
                         .tabItem {
                             Text(Constants.TabBarTitle.cart)
@@ -56,14 +56,14 @@ struct MainView: View {
                     //                    Image(systemName: Constants.TabBarImageName.about)
                     //            }
                     
-                    PunkView()
+                    HistoryView(selectedItem: self.$selectedItem)
                         .tag(3)
                         .tabItem {
-                            Text(Constants.TabBarTitle.beers)
-                            Image(systemName: Constants.TabBarImageName.beers)
+                            Text(Constants.TabBarTitle.history)
+                            Image(systemName: Constants.TabBarImageName.history)
                     }
                     
-                } // TabView
+                }.accentColor(.black) // TabView
                 ZStack {
                     Circle()
                         .foregroundColor(.red)
