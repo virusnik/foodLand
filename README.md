@@ -1,8 +1,8 @@
 # foodLand
 # Intovert - Your Personal Waiter
 
-The app is designed for people who do not like to wait for waiters and when they brought their order or do not bring what they ordered. Personal waiter in the app, you can select dishes from the menu, see their readiness status, and pay using the app.
-It's application create for natural introvert and  
+The app is designed for people who do not like to wait for waiters and when they brought their order or do not bring what they ordered. Personal waiter in the app, you can select dishes from the menu, see their order status, and pay using the app.
+It's application create for natural introvert and people who who value time.  
 
 ### QrScanner
 
