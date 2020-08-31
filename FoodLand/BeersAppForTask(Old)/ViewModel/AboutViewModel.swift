@@ -8,9 +8,9 @@
 
 import Foundation
 
-class AboutViewModel: ObservableObject {
-  static var shared = AboutViewModel()
-
-  @Setting(key: "TabSelection")
-  var tabSelection: Int = 0
-}
+//class AboutViewModel: ObservableObject {
+//  static var shared = AboutViewModel()
+//
+//  @Setting(key: "TabSelection")
+//  var tabSelection: Int = 0
+//}

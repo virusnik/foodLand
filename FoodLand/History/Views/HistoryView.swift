@@ -41,13 +41,12 @@ struct HistoryView: View {
                     }
                 }
                 
-                Section(    ) {
+                Section {
                     if !viewModel.localOrdersModel.isEmpty {
                         ForEach(viewModel.localOrdersModel) { item in
                             if item.status == .closed {
                                 HistoryRowView(orderInfo: item)
                             }
-                            
                         }
                     }
                 }

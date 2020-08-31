@@ -11,7 +11,6 @@ import SwiftUI
 struct MainView: View {
     
     @EnvironmentObject var categoryListViewModel: CategoryListViewModel
-    @EnvironmentObject var beersListViewModel: BeersViewModel
     @State var selected: Int = 0
     @State var selectedItem: Int? = 0
     
@@ -22,10 +21,10 @@ struct MainView: View {
         GeometryReader { geometry in
             ZStack(alignment: .bottomLeading) {
                 TabView(selection: self.$selected) {
-//                    ScannerView(selected: self.$selected, selectedItem: self.$selectedItem)
-                                    ChooseTableView(numberTable: "",
-                                                    selected: self.$selected,
-                                                    selectedItem: self.$selectedItem)
+                    //                    ScannerView(selected: self.$selected, selectedItem: self.$selectedItem)
+                    ChooseTableView(numberTable: "",
+                                    selected: self.$selected,
+                                    selectedItem: self.$selectedItem)
                         .tag(0)
                         .tabItem {
                             VStack {
@@ -49,13 +48,6 @@ struct MainView: View {
                             Text(Constants.TabBarTitle.cart)
                             Image(systemName: Constants.TabBarImageName.cart)
                     }
-                    //            AboutView()
-                    //                .tag(2)
-                    //                .tabItem {
-                    //                    Text(Constants.TabBarTitle.about)
-                    //                    Image(systemName: Constants.TabBarImageName.about)
-                    //            }
-                    
                     HistoryView(selectedItem: self.$selectedItem)
                         .tag(3)
                         .tabItem {

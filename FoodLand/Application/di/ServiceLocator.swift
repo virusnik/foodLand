@@ -28,6 +28,6 @@ class ServiceLocator {
 
 extension ServiceLocator {
     func registerDefaultServices() {
-        register(BeerService() as BeerServiceProtocol)
+//        register(BeerService() as BeerServiceProtocol)
     }
 }

@@ -22,9 +22,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create the SwiftUI view that provides the window contents.
         let contentView = MainView()
             .environmentObject(CategoryListViewModel())
-            .environmentObject(FoodListViewModel())
-            .environmentObject(BeersViewModel())
-//            .environmentObject(FoodRowViewModel())
             .environmentObject(ScannerViewModel())
 
         // Use a UIHostingController as window root view controller.

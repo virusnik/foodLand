@@ -93,18 +93,6 @@ struct ShoppingCart: View {
     }
 }
 
-struct GradientButtonStyle: ButtonStyle {
-    func makeBody(configuration: Self.Configuration) -> some View {
-        configuration.label
-            .font(.body)
-            .foregroundColor(Color.white)
-            .frame(width: UIScreen.main.bounds.width - 50, height: 40, alignment: .center)
-            .padding()
-            .background(LinearGradient(gradient: Gradient(colors: [Color.black, Color.gray]), startPoint: .bottom, endPoint: .top))
-            .cornerRadius(15.0)
-    }
-}
-
 //struct ShoppingCart_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ShoppingCart()

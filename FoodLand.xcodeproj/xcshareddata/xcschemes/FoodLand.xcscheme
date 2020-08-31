@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "36AF7C5F240D3A5500FFF9B0"
-               BuildableName = "FoodLand.app"
+               BuildableName = "Intovert Pesonal Waiter.app"
                BlueprintName = "FoodLand"
                ReferencedContainer = "container:FoodLand.xcodeproj">
             </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "36AF7C5F240D3A5500FFF9B0"
-            BuildableName = "FoodLand.app"
+            BuildableName = "Intovert Pesonal Waiter.app"
             BlueprintName = "FoodLand"
             ReferencedContainer = "container:FoodLand.xcodeproj">
          </BuildableReference>
@@ -82,7 +82,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "36AF7C5F240D3A5500FFF9B0"
-            BuildableName = "FoodLand.app"
+            BuildableName = "Intovert Pesonal Waiter.app"
             BlueprintName = "FoodLand"
             ReferencedContainer = "container:FoodLand.xcodeproj">
          </BuildableReference>
