@@ -151,7 +151,7 @@
 		369FF46A24FD57FA0053BABD /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		369FF46C24FD58680053BABD /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
 		36ABB040241668E80022D7C6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		36AF7C60240D3A5500FFF9B0 /* Intovert Pesonal Waiter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Intovert Pesonal Waiter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		36AF7C60240D3A5500FFF9B0 /* Pesonal Waiter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pesonal Waiter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		36AF7C63240D3A5500FFF9B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36AF7C65240D3A5500FFF9B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		36AF7C67240D3A5500FFF9B0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -570,7 +570,7 @@
 		36AF7C61240D3A5500FFF9B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				36AF7C60240D3A5500FFF9B0 /* Intovert Pesonal Waiter.app */,
+				36AF7C60240D3A5500FFF9B0 /* Pesonal Waiter.app */,
 				36AF7C76240D3A5700FFF9B0 /* FoodLandTests.xctest */,
 				36AF7C81240D3A5700FFF9B0 /* FoodLandUITests.xctest */,
 			);
@@ -695,7 +695,7 @@
 				36CE3ADA245857CF00EA7D89 /* ImagePackage */,
 			);
 			productName = FoodLand;
-			productReference = 36AF7C60240D3A5500FFF9B0 /* Intovert Pesonal Waiter.app */;
+			productReference = 36AF7C60240D3A5500FFF9B0 /* Pesonal Waiter.app */;
 			productType = "com.apple.product-type.application";
 		};
 		36AF7C75240D3A5700FFF9B0 /* FoodLandTests */ = {
@@ -1072,7 +1072,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.FoodLand;
-				PRODUCT_NAME = "Intovert Pesonal Waiter";
+				PRODUCT_NAME = "Pesonal Waiter";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1092,7 +1092,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.FoodLand;
-				PRODUCT_NAME = "Intovert Pesonal Waiter";
+				PRODUCT_NAME = "Pesonal Waiter";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
